@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html id="document:html" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- start: change meta type to edge. added by rajneesh -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- end -->
+    <meta content="BVNETV2-APPLICATION" name="bureauveritas-description">
+    <meta content="5.1.2-SNAPSHOT" name="Application-Version">
+    <link href="styles/royale.css" rel="stylesheet" type="text/css">
+    <link href="styles/bvnet.css" rel="stylesheet" type="text/css">
+    <link href="fonts/icomoon-fonts/style.css" rel="stylesheet" >
+    <script src="scripts/fixsearchheader.js" type="text/javascript"></script>
+    <!-- Rajneesh commented
+    <script src="./BVnet_files/DownloadExcel.js" type="text/javascript"></script>
+    <script src="./BVnet_files/filterForm.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.theme.fint.js" type="text/javascript"></script>
+    <script src="./BVnet_files/validation.js" type="text/javascript"></script>
+    <script src="./BVnet_files/jumploader.js" type="text/javascript"></script>
+-->
+    <script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <title id="document:title">BVnet</title>
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        function appletInitialized(applet) {
+            enableStatusChange();
+            //applet.getViewConfig().setFileListViewLocationBarVisible(true);
+            //applet.getViewConfig().setMainViewFileListViewVisible(true);
+            jQuery.post("/bvnet/createUploadFolderServlet");
+            applet.getUploaderConfig().setUploadUrl('ftp://bvnet2uploader:KLfed659uplKN6@bvnet2-uat.bureauveritas.com:990/VbIERyNLhNbvCdKRLCt13TxI.3a1dcdb6-8132-34c5-9568-83c31c7c98e7?passive"');
+            applet.getMainView().updateView();
+        }
+    </script>
+    <script src="scripts/custom.js" type="text/javascript"></script>
+
+
+    <meta content="Rendered by ICEFaces D2D" name="icefaces">
+    <script src="./BVnet_files/icefaces-d2d.js" type="text/javascript"></script>
+    <script src="./BVnet_files/ice-extras.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        try {
+            document.execCommand('BackgroundImageCache', false, true);
+        } catch (e) {}
+    </script>
+</head>
+
+<body class="" id="document:body">
+    <iframe frameborder="0" id="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" name="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" src="./BVnet_files/blank.html" style="z-index: 10000; visibility: hidden; width: 0; height: 0; position: absolute; opacity: 0.22; filter: alpha(opacity=22);" title="Icefaces Redirect"></iframe>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:configuration-script" type="text/javascript">
+        if (!window.sessions) window.sessions = [];
+        window.sessions.push('0BNCDGaNyRt8eadp9c2u2A');
+        window.disposeViewsURI = '/bvnet/block/dispose-views';
+        var container = '0BNCDGaNyRt8eadp9c2u2A:1:configuration-script'.asElement().parentNode;
+        container.bridge = new Ice.Community.Application({
+            session: '0BNCDGaNyRt8eadp9c2u2A',
+            view: 1,
+            synchronous: true,
+            connectionLostRedirectURI: null,
+            sessionExpiredRedirectURI: null,
+            connection: {
+                context: {
+                    current: '/bvnet/',
+                    async: '/bvnet/'
+                },
+                timeout: 300000,
+                heartbeat: {
+                    interval: 20000,
+                    timeout: 15000,
+                    retries: 5
+                }
+            },
+            messages: {
+                sessionExpired: 'User Session Expired',
+                connectionLost: 'Network Connection Interrupted',
+                serverError: 'Server Internal Error',
+                description: 'To reconnect click the Reload button on the browser or click the button below',
+                buttonText: 'Reload'
+            }
+        }, container);
+    </script>
+        <div class="bvn-banner-wrapper">
+        <iframe class="bvn-banner" height="100%" width="100%" frameborder="0" id="component-1005" src="https://maestro-cer-uat.bureauveritas.com/static/banner/en/index.html" style="height: 200px;"></iframe>
+        <img class="bvn-client-logo" alt="BVNet logo" id="_id31" src="images/HessLogo.gif">
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td class="bvn-nopictureBackground" width="100%">
+                    <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                        <table border="0" cellpadding="0" cellspacing="0" id="_id28" width="100%" class="bvn-header">
+                            <tbody>
+                                <tr>
+<td id="_id28-0-0" class="headerLeft">
+                                        <div class="bvn-logo"><img src="images/bvnetlogo.png" alt="BVNet logo"></div>
+                                    </td>
+                                    <td class="headerCenter">
+                                        <div class="bvn-dropdown">
+                                            <ul class="bvn-dropitem">
+                                                <li class="bvn-useritem">
+                                                    <a id="userbtn" href="#">User NAME <i class="bvn-icon icon-arrow-down"></i></a>
+                                                    <ul class="bvn-subitem">
+                                                        <li class="bvn-logout"><a id="menu:_id412" href="/bvnet/html/view/logout.jsp"><span id="menu:logoutSelect" class="Menuitem-Gray">Logout</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="bvn-banneritem">
+                                                    <a id="userbtn" href="#"><i class="bvn-icon icon-arrow-up"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="headerRight" id="_id28-0-1"><img alt="logo" src="images/toolbar-logo-veritas-red.jpg"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </jsp:root>
+                    <table class="icePnlGrd bvn-panel-wrapper" id="_id46" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="icePnlGrdRow1">
+                                <td class="icePnlGrdCol menuCol bvn-left-panel" id="_id46-0-0">
+                                    <div class="bvn-wrapper-left-panel" style="overflow:auto;">
+                                        <!-- rajneesh: windows/document height needs to calculate (height:744px;) -->
+                                        <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                                            <form action="javascript:;" class="iceFrm" enctype="application/x-www-form-urlencoded" id="menu" method="post" onsubmit="return false;">
+                                                <script type="text/javascript">
+                                                    $element(document.getElementById('menu')).captureAndRedirectSubmit();
+                                                </script>
+                                                <input name="menu" type="hidden" value="menu">
+                                                <input name="icefacesCssUpdates" type="hidden" value="">
+                                                <table cellpadding="0" cellspacing="0" id="menu:_id49" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="menuExpandCol" id="menu:_id49-0-0">
+                                                                <div class="icePnlGrp" id="menu:_id50" style="display:none">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <input id="menu:_id52" name="menu:_id52" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-right.png" type="image">
+                                                                </div>
+                                                            </td>
+                                                            <td class="menuCol" id="menu:_id49-0-1">
+                                                                <div class="icePnlGrp leftNav" id="menu:_id53">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <table id="menu:_id54" width="100%">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="menuHeader" colspan="1" scope="colgroup">
+                                                                                    <table class="icePnlGrd" id="menu:_id55" width="100%">
+                                                                                        <tbody>
+                                                                                            <tr class="icePnlGrdRow1">
+                                                                                                <td class="icePnlGrdCol headerLeft" id="menu:_id55-0-0"><span class="menuHeaderText" id="menu:menuHeaderText">Menu</span></td>
+                                                                                                <td class="icePnlGrdCol headerRight" id="menu:_id55-0-1">
+                                                                                                    <input id="menu:menuArrowClose" name="menu:menuArrowClose" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-left.png" type="image">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td id="menu:_id54-0-0">
+                                                                                    <table id="menu:_id58" class="menuBorder" cellpadding="0" cellspacing="0">
+                                                                                        <tbody>
+                                                                                            <!-- Rajneesh: commented
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-0-0">
+                                                                                                    <div id="menu:connectionStatus" class="iceOutConStat">
+                                                                                                        <div id="menu:connectionStatus:connection-idle" class="iceOutConStatInactv" style="visibility: visible;"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-working" class="iceOutConStatActv"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-trouble" class="iceOutConStatCaution"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-lost" class="iceOutConStatDisconnect">An error has occurred. Click here to login</div>
+                                                                                                        <script type="text/javascript">
+                                                                                                            'menu:connectionStatus'.asExtendedElement().findContainerFor('bridge').bridge.attachStatusManager(function (defaultStatusManager) {
+                                                                                                                return new Ice.Status.ComponentStatusManager('menu:connectionStatus:connection-working', 'menu:connectionStatus:connection-idle', 'menu:connectionStatus:connection-trouble', 'menu:connectionStatus:connection-lost', defaultStatusManager, false, false);
+                                                                                                            });
+                                                                                                        </script>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-1-0">
+                                                                                                    <script type="text/javascript">
+                                                                                                        document.getElementById('menu:connectionStatus:connection-lost').onclick = function () {
+                                                                                                            location.reload(true);
+                                                                                                        }
+                                                                                                    </script>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-2-0">
+                                                                                                    <div style="padding: 7px; margin: 0px;"></div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            -->
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-3-0">
+                                                                                                    <div class="gsd-left-search"><span id="menu:_id65"><span id="menu:_id66" class="greyboldmenu">Select Project</span>
+                                                                                                        <select style="width:125px;font-size:7pt;font-family:Arial;" size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="menu:projectSelect" id="menu:projectSelect" class="iceSelOneMnu">
+                                                                                                            <option value="166428">BP</option>
+                                                                                                            <option value="166430" selected="selected">Hess Denmark</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                        <span id="menu:_id71"><span id="menu:_id72" class="greyboldmenu">Select Client</span>
+                                                                                                        <select style="width:125px;font-size:7pt;font-family:Arial;" size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="menu:clientSelect" id="menu:clientSelect" class="iceSelOneMnu">
+                                                                                                            <option value="6151" selected="selected">Hess Denmark</option>
+                                                                                                            <option value="7189">Yann - Client 1</option>
+                                                                                                            <option value="7190">Yann - Client 2</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-4-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id77';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id77" href="javascript:;"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-home"></i>Home</span></a></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-5-0">
+                                                                                                    <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"></jsp:root>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-6-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id96';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id96" href="javascript:;"><span id="menu:_id79:0:_id97" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Production Data</span></a>
+                                                                                                    <div id="menu:_id79:0:_id98" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id79:0:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:0:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:0:_id101';form['formId'].value='2587';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:0:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:0:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Asset Profile</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:1:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:1:_id105';form['formId'].value='2587';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:1:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:1:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Asset Profile Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:2:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:2:_id101';form['formId'].value='2588';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:2:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:2:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Platform Profile</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:3:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:3:_id105';form['formId'].value='2588';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:3:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:3:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Platform Profile Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:4:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:4:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:4:_id101';form['formId'].value='2589';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:4:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:4:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:5:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:5:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:5:_id105';form['formId'].value='2589';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:5:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:5:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Report Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:6:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td class="bvn-active" id="menu:_id79:0:_id99:6:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:6:_id101';form['formId'].value='2590';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:6:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:6:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:7:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:7:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:7:_id105';form['formId'].value='2590';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:7:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:7:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Findings Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:8:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:8:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:8:_id105';form['formId'].value='2590';form['myFindings'].value='true';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:8:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:8:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>My Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:9:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:9:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:9:_id101';form['formId'].value='2580';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:9:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:9:_id103" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-edit-add"></i>Project Information</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:10:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:10:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:10:_id105';form['formId'].value='2580';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:10:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:10:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Project Information Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                    <a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id96';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id96" href="javascript:;"><span id="menu:_id79:1:_id97" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Reference Table</span></a>
+                                                                                                    <div id="menu:_id79:1:_id98" class="icePnlGrp leftNav" style="display:none">
+                                                                                                        <table id="menu:_id79:1:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:0:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:0:_id101';form['formId'].value='2582';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:0:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:0:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Examination / Audit Type</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:1:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:1:_id105';form['formId'].value='2582';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:1:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:1:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Examination / Audit Type Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:2:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:2:_id101';form['formId'].value='2581';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:2:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:2:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Finding Category</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:3:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:3:_id105';form['formId'].value='2581';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:3:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:3:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Finding Category Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:4:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:4:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:4:_id101';form['formId'].value='2585';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:4:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:4:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Performance Standard Group</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:5:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:5:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:5:_id105';form['formId'].value='2585';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:5:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:5:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Performance Standard Group Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:6:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:6:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:6:_id101';form['formId'].value='2586';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:6:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:6:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Performance Std</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:7:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:7:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:7:_id105';form['formId'].value='2586';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:7:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:7:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Performance Std Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:8:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:8:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:8:_id101';form['formId'].value='2583';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:8:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:8:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Service Type</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:9:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:9:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:9:_id105';form['formId'].value='2583';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:9:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:9:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Service Type Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:10:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:10:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:10:_id101';form['formId'].value='2584';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:10:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:10:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Status</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:11:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:11:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:11:_id105';form['formId'].value='2584';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:11:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:11:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Status Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-7-0">
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-8-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id141';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id141" href="javascript:;"><span id="menu:_id142" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Stats</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id143" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id145">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id145-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id146';form['action'].value='stats/trend';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id146" href="javascript:;"><span id="menu:_id148" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Historic Trend</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id150">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id150-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id151';form['action'].value='stats/finding';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id151" href="javascript:;"><span id="menu:_id153" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Findings Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id155">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id155-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id156';form['action'].value='stats/actionParty';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id156" href="javascript:;"><span id="menu:_id158" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Action Party Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-9-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id180';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id180" href="javascript:;"><span id="menu:_id181" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Admin</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id182" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id187">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id187-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id188';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id188" href="javascript:;"><span id="menu:_id189" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>UK Project Setup</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id194">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id194-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id195';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id195" href="javascript:;"><span id="menu:adminSelectreferenceSetup" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Reference Setup</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id203">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id203-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id204';form['paramTypeId'].value='0';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id204" href="javascript:;"><span id="menu:adminSelectAccessStats" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Access Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id207">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id207-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id208';form['reportName'].value='BV Users Search';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id208" href="javascript:;"><span id="menu:adminSelectBVuserSearch" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>BV Users Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id211">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id211-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id212';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id212" href="javascript:;"><span id="menu:adminSelectBVuserAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>BV User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id214">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id214-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id215';form['reportName'].value='Client User Search';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id215" href="javascript:;"><span id="menu:adminSelectclientuserSearch" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client User Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id218">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id218-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id219';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id219" href="javascript:;"><span id="menu:adminSelectclientuserAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id221">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id221-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id222';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id222" href="javascript:;"><span id="menu:adminSelectclientAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id227">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id227-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id228';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id228" href="javascript:;"><span id="menu:adminSelecthomepage" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Edit Home Page</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-10-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id287';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id287" href="javascript:;"><span id="menu:_id288" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Layout</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id289" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id294">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id294-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id295';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id295" href="javascript:;"><span id="menu:layoutSelectreports" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Reports</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-11-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id332';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id332" href="javascript:;"><span id="menu:_id333" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Security</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id334" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id335">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id335-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id336';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id336" href="javascript:;"><span id="menu:securitySelectprofiles" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profiles</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id337">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id337-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id338';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id338" href="javascript:;"><span id="menu:securitySelectprofileAccess" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profile Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id339">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id339-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id340';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id340" href="javascript:;"><span id="menu:securitySelectprofilefieldaccess" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profile Field Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-12-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id366';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id366" href="javascript:;"><span id="menu:_id367" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Maintenance</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id368" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:Maintenance:9:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:9:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:9:_id370';form['formId'].value='2589';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:9:_id370" href="javascript:;"><span id="menu:Maintenance:9:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:10:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:10:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:10:_id370';form['formId'].value='2590';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:10:_id370" href="javascript:;"><span id="menu:Maintenance:10:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:11:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:11:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:11:_id370';form['formId'].value='2680';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:11:_id370" href="javascript:;"><span id="menu:Maintenance:11:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Mitigation/ Contingency Action</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:12:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:12:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:12:_id370';form['formId'].value='2681';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:12:_id370" href="javascript:;"><span id="menu:Maintenance:12:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-addment"></i>Delete Duty Holder and Bureau Veritas Comments</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id377">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id377-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id378';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id378" href="javascript:;"><span id="menu:clearCache" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-addment"></i>Clear cache</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!-- Rajneesh: commented login
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-13-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id408';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id408" href="javascript:;"><span id="menu:_id409" class="redboldmenu bvn-menu-icons">Session</span></a>
+                                                                                                    <div id="menu:_id410" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id411">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id411-0-0"><a id="menu:_id412" href="/bvnet/html/view/logout.jsp"><span id="menu:logoutSelect" class="Menuitem-Gray">Logout</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+-->
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <!--
+                                                                        <tr>
+                                                                            <td id="menu:_id54-1-0">
+                                                                                <table cellpadding="0" cellspacing="0" id="menu:_id419" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr style="display: none;">
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td class="menuFooter" colspan="1">
+                                                                                                <table class="icePnlGrd" id="menu:_id420" width="100%">
+                                                                                                    <tbody>
+                                                                                                        <tr style="display: none;">
+                                                                                                            <td></td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        -->
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div id="menuhdnFldsDiv" style="display:none;">
+                                                    <input name="formId" type="hidden">
+                                                    <input name="myFindings" type="hidden">
+                                                    <input name="reportName" type="hidden">
+                                                    <input name="reportPath" type="hidden">
+                                                    <input name="paramTypeId" type="hidden">
+                                                    <input name="menu:_idcl" type="hidden">
+                                                </div>
+                                            </form>
+                                        </jsp:root>
+                                    </div>
+                                </td>
+                                <td class="icePnlGrdCol pageCol bvn-right-panel" id="_id46-0-1">
+                                    <div class="bvn-wrapper-right-panel" style="overflow: auto;">
+                                        <!-- rajneesh: windows/document height needs to calculate (height:740px; ) -->
+                                        <div class="bvn-page-title">
+                                            <table id="_id423:_id424" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="_id423:_id424-0-0">
+                                                            <div class="sectionTitle">Findings</div>
+                                                        </td>
+                                                        <td id="_id423:_id424-0-2" align="right">
+                                                            <a style="text-decoration:none;" onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['_id423:_idcl'].value='_id423:_id434';form['formId'].value='2590';return iceSubmit(form,this,event);" onblur="setFocus('');" id="_id423:_id434" href="javascript:;" class="iceCmdBtn bvn-button"><i class="icon-triangle-left"></i> Return</a>
+                                                            <a onfocus="setFocus(this.id);" onclick="window.open('/bvnet/html/view/form.iface?pv=1&amp;pd=1');;var form=formOf(this);form['_id423:_idcl'].value='_id423:_id429';return iceSubmitPartial(form,this,event);" onblur="setFocus('');" id="_id423:_id429" href="javascript:;" class="iceCmdLnk bvn-button"><i class="icon-print"></i> Print </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul id="_id426" style="display:none;">
+                                            <li></li>
+                                        </ul>
+
+                                        <table width="100%" cellspacing="0" cellpadding="0" id="_id437">
+                                            <tbody>
+                                                <tr>
+                                                    <td id="_id437-0-0">
+                                                        <div class="bvn-detail-form">
+                                                            <form onsubmit="return false;" id="bvform" class="iceFrm" action="javascript:;" enctype="application/x-www-form-urlencoded" method="post">
+                                                                <script type="text/javascript">
+                                                                    $element(document.getElementById('bvform')).captureAndRedirectSubmit();
+                                                                </script>
+                                                                <input type="hidden" value="bvform" name="bvform">
+                                                                <input type="hidden" value="" name="icefacesCssUpdates">
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id438">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id439">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id439-0-0" class="headerLeft"><span id="bvform:_id440" class="menuHeaderText">Segmentation Selection</span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id438-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id442" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id442-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id446">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-0-0" class="colLeft"></td>
+                                                                                                                            <td id="bvform:_id446-0-1" class="colLeft"><span id="bvform:segmentationsMessage"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-1-0" class="colLeft"><span id="bvform:_id449" class="formLabe2">Asset</span></td>
+                                                                                                                            <td id="bvform:_id446-1-1" class="colLeft">
+                                                                                                                                <select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:level1" id="bvform:level1" class="iceSelOneMnu">
+                                                                                                                                    <option value="3369544" selected="selected">South Arne</option>
+                                                                                                                                </select>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-2-0" class="colLeft"><span id="bvform:_id451" class="formLabe2">Platform</span></td>
+                                                                                                                            <td id="bvform:_id446-2-1" class="colLeft">
+                                                                                                                                <select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:level2" id="bvform:level2" class="iceSelOneMnu">
+                                                                                                                                    <option value="3369545" selected="selected">SA Main Platform</option>
+                                                                                                                                    <option value="3382208">SA Wellhead Platform East</option>
+                                                                                                                                    <option value="3382209">SA Wellhead Platform North</option>
+                                                                                                                                </select>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-3-0" class="colLeft">
+                                                                                                                                <label id="bvform:keyFieldtext" class="formLabel">Reference</label>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id446-3-1" class="colLeft">
+                                                                                                                                <select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:Keyfield" id="bvform:Keyfield" class="iceSelOneMnu">
+                                                                                                                                    <option value="17901278"> 15.ESB.8712483.IS.ASTF.ISR-02.REC.01</option>
+                                                                                                                                    <option value="17901279"> 15.ESB.8712483.IS.ASTF.ISR-02.REC.02</option>
+                                                                                                                                    <option value="17901280"> 15.ESB.8712483.IS.ASTF.ISR-02.REC.03</option>
+                                                                                                                                    <option value="16273378">15-SA-OFF-02/C1/OBS1</option>
+                                                                                                                                    <option value="16273379">15-SA-OFF-02/C1/OBS2</option>
+                                                                                                                                    <option value="16273382">15-SA-OFF-02/C1/OBS3</option>
+                                                                                                                                    <option value="16273383">15-SA-OFF-02/C2/OBS1</option>
+                                                                                                                                    <option value="16273415">15-SA-OFF-02/E1/OBS1</option>
+                                                                                                                                    <option value="16273426">15-SA-OFF-02/E1/OBS2</option>
+                                                                                                                                    <option value="16273427">15-SA-OFF-02/E1/OBS3</option>
+                                                                                                                                    <option value="16273388">15-SA-OFF-02/P7/OBS1</option>
+                                                                                                                                    <option value="16273393">15-SA-OFF-02/P7/OBS2</option>
+                                                                                                                                    <option value="16072531">15-SAC-OFF-01/C2/OBS01</option>
+                                                                                                                                    <option value="16072532">15-SAC-OFF-01/C4/OBS01</option>
+                                                                                                                                    <option value="16072533">15-SAC-OFF-01/C4/OBS02 </option>
+                                                                                                                                    <option value="16072534">15-SAC-OFF-01/C4/OBS03 </option>
+                                                                                                                                    <option value="16072535">15-SAC-OFF-01/C4/OBS04 </option>
+                                                                                                                                    <option value="16072536">15-SAC-OFF-01/C4/OBS05 </option>
+                                                                                                                                    <option value="16072542">15-SAC-OFF-01/C5/OBS01 </option>
+                                                                                                                                    <option value="16072539">15-SAC-OFF-01/C6/OBS01 </option>
+                                                                                                                                    <option value="16072541">15-SAC-OFF-01/C6/OBS02 </option>
+                                                                                                                                    <option value="16072538">15-SAC-OFF-01/E2/OBS01</option>
+                                                                                                                                    <option value="16072529">15-SAC-OFF-01/E3/OBS01 </option>
+                                                                                                                                    <option value="16072537">15-SAC-OFF-01/E4/OBS01 </option>
+                                                                                                                                    <option value="16072723">15-SAC-OFF-01/M1/OBS01 </option>
+                                                                                                                                    <option value="16072513">15-SAC-OFF-01/M2/OBS01 </option>
+                                                                                                                                    <option value="16072520">15-SAC-OFF-01/M2/OBS02 </option>
+                                                                                                                                    <option value="16072521">15-SAC-OFF-01/M2/OBS04 </option>
+                                                                                                                                    <option value="16072522">15-SAC-OFF-01/M4/OBS01 </option>
+                                                                                                                                    <option value="16072523">15-SAC-OFF-01/M4/OBS02 </option>
+                                                                                                                                    <option value="16072524">15-SAC-OFF-01/M4/OBS03 </option>
+                                                                                                                                    <option value="16072525">15-SAC-OFF-01/M4/OBS04 </option>
+                                                                                                                                    <option value="16072526">15-SAC-OFF-01/M4/OBS05 </option>
+                                                                                                                                    <option value="16072527">15-SAC-OFF-01/M4/OBS06 </option>
+                                                                                                                                    <option value="16072528">15-SAC-OFF-01/M4/OBS07 </option>
+                                                                                                                                    <option value="16072370">15-SAC-OFF-01/M5/OBS01</option>
+                                                                                                                                    <option value="16072374">15-SAC-OFF-01/M5/OBS02 </option>
+                                                                                                                                    <option value="16072395">15-SAC-OFF-01/M5/OBS03</option>
+                                                                                                                                    <option value="16072401">15-SAC-OFF-01/M5/OBS04 </option>
+                                                                                                                                    <option value="16072404">15-SAC-OFF-01/M5/OBS05 </option>
+                                                                                                                                    <option value="16072405">15-SAC-OFF-01/M5/OBS06 </option>
+                                                                                                                                    <option value="16072407">15-SAC-OFF-01/M5/OBS07 </option>
+                                                                                                                                    <option value="16072408">15-SAC-OFF-01/M5/OBS08</option>
+                                                                                                                                    <option value="16072410">15-SAC-OFF-01/M5/OBS09</option>
+                                                                                                                                    <option value="16072509">15-SAC-OFF-01/M5/OBS10 </option>
+                                                                                                                                    <option value="16072510">15-SAC-OFF-01/M5/OBS11</option>
+                                                                                                                                    <option value="16072511">15-SAC-OFF-01/M6/OBS1 </option>
+                                                                                                                                    <option value="16072725">15-SAC-OFF-01/P4/OBS01 </option>
+                                                                                                                                    <option value="16072726">15-SAC-OFF-01/P4/OBS02 </option>
+                                                                                                                                    <option value="16072727">15-SAC-OFF-01/P4/OBS03 </option>
+                                                                                                                                    <option value="16072728">15-SAC-OFF-01/P4/OBS04 </option>
+                                                                                                                                    <option value="16072729">15-SAC-OFF-01/P4/OBS05 </option>
+                                                                                                                                    <option value="16072730">15-SAC-OFF-01/P4/OBS06 </option>
+                                                                                                                                    <option value="16072731">15-SAC-OFF-01/P5/OBS01 </option>
+                                                                                                                                    <option value="16072732">15-SAC-OFF-01/P5/OBS02 </option>
+                                                                                                                                    <option value="16072733">15-SAC-OFF-01/P5/OBS03 </option>
+                                                                                                                                    <option value="16072720">15-SAC-OFF-01/P6/OBS01 </option>
+                                                                                                                                    <option value="16072721">15-SAC-OFF-01/P6/OBS02 </option>
+                                                                                                                                    <option value="16072722">15-SAC-OFF-01/P6/OBS03 </option>
+                                                                                                                                    <option value="16538274">15-SAC-OFF-03/M5/OBS1</option>
+                                                                                                                                    <option value="16538230">15-SAC-OFF-03/P4/OBS1</option>
+                                                                                                                                    <option value="16538231">15-SAC-OFF-03/P4/OBS2</option>
+                                                                                                                                    <option value="16538273">15-SAC-OFF-03/P4/OBS3</option>
+                                                                                                                                    <option value="16754648">15-SAC-OFF-03/P7/OBS4</option>
+                                                                                                                                    <option value="16754642">15-SAC-OFF-04/C1/OBS1</option>
+                                                                                                                                    <option value="16754645">15-SAC-OFF-04/LVD1/OBS1</option>
+                                                                                                                                    <option value="16754646">15-SAC-OFF-04/LVD1/OBS2</option>
+                                                                                                                                    <option value="16155384">15-SAC-ON-01/P1/OBS01</option>
+                                                                                                                                    <option value="16155385">15-SAC-ON-01/P1/OBS02</option>
+                                                                                                                                    <option value="16155386">15-SAC-ON-01/P1/OBS03</option>
+                                                                                                                                    <option value="16155387">15-SAC-ON-01/P1/OBS04</option>
+                                                                                                                                    <option value="16155388">15-SAC-ON-01/P1/OBS05</option>
+                                                                                                                                    <option value="16155389">15-SAC-ON-01/P1/OBS06</option>
+                                                                                                                                    <option value="16155390">15-SAC-ON-01/P1/OBS07</option>
+                                                                                                                                    <option value="17085347">15.ABD.8669649.DR.WO90042057.01/MEM001</option>
+                                                                                                                                    <option value="17085360">15.ABD.8669649.DR.WO90042057.01/MEM002</option>
+                                                                                                                                    <option value="17085361">15.ABD.8669649.DR.WO90042057.01/MEM003</option>
+                                                                                                                                    <option value="17085363">15.ABD.8669649.DR.WO90042057.01/MEM004</option>
+                                                                                                                                    <option value="17085365">15.ABD.8669649.DR.WO90042057.01/MEM005</option>
+                                                                                                                                    <option value="17085366">15.ABD.8669649.DR.WO90042057.01/MEM006</option>
+                                                                                                                                    <option value="17085367">15.ABD.8669649.DR.WO90042057.01/MEM007</option>
+                                                                                                                                    <option value="17085368">15.ABD.8669649.DR.WO90042057.01/MEM008</option>
+                                                                                                                                    <option value="17085369">15.ABD.8669649.DR.WO90042057.01/MEM009</option>
+                                                                                                                                    <option value="17085375">15.ABD.8669649.DR.WO90042057.01/MEM010</option>
+                                                                                                                                    <option value="17085414">15.ABD.8669649.DR.WO90042057.01/MEM011</option>
+                                                                                                                                    <option value="17085416">15.ABD.8669649.DR.WO90042057.01/MEM012</option>
+                                                                                                                                    <option value="17085417">15.ABD.8669649.DR.WO90042057.01/MEM013</option>
+                                                                                                                                    <option value="17085418">15.ABD.8669649.DR.WO90042057.01/MEM014</option>
+                                                                                                                                    <option value="17085420">15.ABD.8669649.DR.WO90042057.01/MEM015</option>
+                                                                                                                                    <option value="17085436">15.ABD.8669649.DR.WO99008645.01/MEM001</option>
+                                                                                                                                    <option value="17085485">15.ABD.8669649.DR.WO99008645.01/MEM002</option>
+                                                                                                                                    <option value="17374548">15.ABD.8809915.IS.ASBW.ISR.01/MEM01</option>
+                                                                                                                                    <option value="17599749">15.ABD.8809915.IS.ASBW.ISR.02/REC01</option>
+                                                                                                                                    <option value="17599771">15.ABD.8809915.IS.ASBW.ISR.02/REC02</option>
+                                                                                                                                    <option value="17599772">15.ABD.8809915.IS.ASBW.ISR.02/REC03</option>
+                                                                                                                                    <option value="17599774">15.ABD.8809915.IS.ASBW.ISR.02/REC04</option>
+                                                                                                                                    <option value="17599775">15.ABD.8809915.IS.ASBW.ISR.02/REC05</option>
+                                                                                                                                    <option value="17947982">15.ESB.8669649.DR.31764.DRR-02.OBS.01</option>
+                                                                                                                                    <option value="17787400">15.ESB.8669649.DR.New LOS gas det.DRR-01.OBS.01</option>
+                                                                                                                                    <option value="17787406">15.ESB.8669649.DR.New LOS gas det.DRR-01.OBS.02</option>
+                                                                                                                                    <option value="17796410">15.ESB.8669649.DR.WO90039742.DRR-01.OBS.01</option>
+                                                                                                                                    <option value="17796412">15.ESB.8669649.DR.WO90039742.DRR-01.OBS.02</option>
+                                                                                                                                    <option value="17827524">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.01</option>
+                                                                                                                                    <option value="17827527">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.02</option>
+                                                                                                                                    <option value="17827529">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.03</option>
+                                                                                                                                    <option value="17827531">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.04</option>
+                                                                                                                                    <option value="17827532">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.05</option>
+                                                                                                                                    <option value="17827534">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.06</option>
+                                                                                                                                    <option value="17827536">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.07</option>
+                                                                                                                                    <option value="17827538">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.08</option>
+                                                                                                                                    <option value="17827541">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.09</option>
+                                                                                                                                    <option value="17827542">15.ESB.8669649.IS.ASTF-SA-L-7901.ISR-01.OBS.10</option>
+                                                                                                                                    <option value="17921907">15.ESB.8669649.IS.QA/QC.ISR-02.OBS.01</option>
+                                                                                                                                    <option value="17921908">15.ESB.8669649.IS.QA/QC.ISR-02.OBS.02</option>
+                                                                                                                                    <option value="17921909">15.ESB.8669649.IS.QA/QC.ISR-02.OBS.03</option>
+                                                                                                                                    <option value="17892436">15.ESB.8712483.IS.ASTF.ISR-01.MEM.01</option>
+                                                                                                                                    <option value="17892438">15.ESB.8712483.IS.ASTF.ISR-01.MEM.02</option>
+                                                                                                                                    <option value="17892439">15.ESB.8712483.IS.ASTF.ISR-01.MEM.03</option>
+                                                                                                                                    <option value="17892443">15.ESB.8712483.IS.ASTF.ISR-01.MEM.04</option>
+                                                                                                                                    <option value="17892444">15.ESB.8712483.IS.ASTF.ISR-01.MEM.05</option>
+                                                                                                                                    <option value="17892445">15.ESB.8712483.IS.ASTF.ISR-01.MEM.06</option>
+                                                                                                                                    <option value="17892446">15.ESB.8712483.IS.ASTF.ISR-01.MEM.07</option>
+                                                                                                                                    <option value="17892447">15.ESB.8712483.IS.ASTF.ISR-01.MEM.08</option>
+                                                                                                                                    <option value="17892448">15.ESB.8712483.IS.ASTF.ISR-01.MEM.09</option>
+                                                                                                                                    <option value="17892449">15.ESB.8712483.IS.ASTF.ISR-01.MEM.10</option>
+                                                                                                                                    <option value="17892450">15.ESB.8712483.IS.ASTF.ISR-01.MEM.11</option>
+                                                                                                                                    <option value="17892451">15.ESB.8712483.IS.ASTF.ISR-01.MEM.12</option>
+                                                                                                                                    <option value="17892453">15.ESB.8712483.IS.ASTF.ISR-01.MEM.13</option>
+                                                                                                                                    <option value="17892454">15.ESB.8712483.IS.ASTF.ISR-01.MEM.14</option>
+                                                                                                                                    <option value="17892455">15.ESB.8712483.IS.ASTF.ISR-01.MEM.15</option>
+                                                                                                                                    <option value="17892457">15.ESB.8712483.IS.ASTF.ISR-01.MEM.16</option>
+                                                                                                                                    <option value="17892458">15.ESB.8712483.IS.ASTF.ISR-01.MEM.17</option>
+                                                                                                                                    <option value="17892459">15.ESB.8712483.IS.ASTF.ISR-01.MEM.18</option>
+                                                                                                                                    <option value="17892460">15.ESB.8712483.IS.ASTF.ISR-01.MEM.19</option>
+                                                                                                                                    <option value="17892461">15.ESB.8712483.IS.ASTF.ISR-01.MEM.20</option>
+                                                                                                                                    <option value="17892462">15.ESB.8712483.IS.ASTF.ISR-01.MEM.21</option>
+                                                                                                                                    <option value="17892463">15.ESB.8712483.IS.ASTF.ISR-01.MEM.22</option>
+                                                                                                                                    <option value="17892465">15.ESB.8712483.IS.ASTF.ISR-01.OBS.01</option>
+                                                                                                                                    <option value="17892467">15.ESB.8712483.IS.ASTF.ISR-01.OBS.02</option>
+                                                                                                                                    <option value="17892468">15.ESB.8712483.IS.ASTF.ISR-01.OBS.03</option>
+                                                                                                                                    <option value="17892469">15.ESB.8712483.IS.ASTF.ISR-01.OBS.04</option>
+                                                                                                                                    <option value="17892470">15.ESB.8712483.IS.ASTF.ISR-01.OBS.05</option>
+                                                                                                                                    <option value="17892471">15.ESB.8712483.IS.ASTF.ISR-01.OBS.06</option>
+                                                                                                                                    <option value="17892472">15.ESB.8712483.IS.ASTF.ISR-01.OBS.07</option>
+                                                                                                                                    <option value="17892473">15.ESB.8712483.IS.ASTF.ISR-01.OBS.08</option>
+                                                                                                                                    <option value="17892474">15.ESB.8712483.IS.ASTF.ISR-01.OBS.09</option>
+                                                                                                                                    <option value="17892475">15.ESB.8712483.IS.ASTF.ISR-01.OBS.10</option>
+                                                                                                                                    <option value="17892476">15.ESB.8712483.IS.ASTF.ISR-01.OBS.11</option>
+                                                                                                                                    <option value="17892477">15.ESB.8712483.IS.ASTF.ISR-01.OBS.12</option>
+                                                                                                                                    <option value="17892478">15.ESB.8712483.IS.ASTF.ISR-01.OBS.13</option>
+                                                                                                                                    <option value="17892479">15.ESB.8712483.IS.ASTF.ISR-01.OBS.14</option>
+                                                                                                                                    <option value="17892480">15.ESB.8712483.IS.ASTF.ISR-01.OBS.15</option>
+                                                                                                                                    <option value="17892481">15.ESB.8712483.IS.ASTF.ISR-01.OBS.16</option>
+                                                                                                                                    <option value="17892482">15.ESB.8712483.IS.ASTF.ISR-01.OBS.17</option>
+                                                                                                                                    <option value="17892483">15.ESB.8712483.IS.ASTF.ISR-01.OBS.18</option>
+                                                                                                                                    <option value="17892484">15.ESB.8712483.IS.ASTF.ISR-01.OBS.19</option>
+                                                                                                                                    <option value="17892485">15.ESB.8712483.IS.ASTF.ISR-01.OBS.20</option>
+                                                                                                                                    <option value="17892486">15.ESB.8712483.IS.ASTF.ISR-01.OBS.21</option>
+                                                                                                                                    <option value="17892487">15.ESB.8712483.IS.ASTF.ISR-01.OBS.22</option>
+                                                                                                                                    <option value="17892488">15.ESB.8712483.IS.ASTF.ISR-01.OBS.23</option>
+                                                                                                                                    <option value="17892489">15.ESB.8712483.IS.ASTF.ISR-01.OBS.24</option>
+                                                                                                                                    <option value="17892490">15.ESB.8712483.IS.ASTF.ISR-01.OBS.25</option>
+                                                                                                                                    <option value="17892491">15.ESB.8712483.IS.ASTF.ISR-01.OBS.26</option>
+                                                                                                                                    <option value="17892429">15.ESB.8712483.IS.ASTF.ISR-01.REC.01</option>
+                                                                                                                                    <option value="17892430">15.ESB.8712483.IS.ASTF.ISR-01.REC.02</option>
+                                                                                                                                    <option value="17892433">15.ESB.8712483.IS.ASTF.ISR-01.REC.03</option>
+                                                                                                                                    <option value="17901284">15.ESB.8712483.IS.ASTF.ISR-02.MEM.01</option>
+                                                                                                                                    <option value="17901285">15.ESB.8712483.IS.ASTF.ISR-02.MEM.02</option>
+                                                                                                                                    <option value="17901286">15.ESB.8712483.IS.ASTF.ISR-02.MEM.03</option>
+                                                                                                                                    <option value="17901287">15.ESB.8712483.IS.ASTF.ISR-02.MEM.04</option>
+                                                                                                                                    <option value="17901288">15.ESB.8712483.IS.ASTF.ISR-02.MEM.05</option>
+                                                                                                                                    <option value="17901289">15.ESB.8712483.IS.ASTF.ISR-02.MEM.06</option>
+                                                                                                                                    <option value="17901290">15.ESB.8712483.IS.ASTF.ISR-02.MEM.07</option>
+                                                                                                                                    <option value="17901291">15.ESB.8712483.IS.ASTF.ISR-02.MEM.08</option>
+                                                                                                                                    <option value="17901292">15.ESB.8712483.IS.ASTF.ISR-02.MEM.09</option>
+                                                                                                                                    <option value="17901293">15.ESB.8712483.IS.ASTF.ISR-02.MEM.10</option>
+                                                                                                                                    <option value="17901294">15.ESB.8712483.IS.ASTF.ISR-02.MEM.11</option>
+                                                                                                                                    <option value="17901295">15.ESB.8712483.IS.ASTF.ISR-02.MEM.12</option>
+                                                                                                                                    <option value="17901296">15.ESB.8712483.IS.ASTF.ISR-02.OBS.01</option>
+                                                                                                                                    <option value="17901297">15.ESB.8712483.IS.ASTF.ISR-02.OBS.02</option>
+                                                                                                                                    <option value="17901298">15.ESB.8712483.IS.ASTF.ISR-02.OBS.03</option>
+                                                                                                                                    <option value="17901300">15.ESB.8712483.IS.ASTF.ISR-02.OBS.04</option>
+                                                                                                                                    <option value="17901301">15.ESB.8712483.IS.ASTF.ISR-02.OBS.05</option>
+                                                                                                                                    <option value="17901302">15.ESB.8712483.IS.ASTF.ISR-02.OBS.06</option>
+                                                                                                                                    <option value="17901281">15.ESB.8712483.IS.ASTF.ISR-02.REC.04</option>
+                                                                                                                                    <option value="17901282">15.ESB.8712483.IS.ASTF.ISR-02.REC.05</option>
+                                                                                                                                    <option value="17901283">15.ESB.8712483.IS.ASTF.ISR-02.REC.06</option>
+                                                                                                                                    <option value="17116496">15.ESB.OFF-02-ATEX.OBS02</option>
+                                                                                                                                    <option value="17116471">15.ESB.OFF-02.SAP.OBS01</option>
+                                                                                                                                    <option value="16067311" selected="selected">BV-IP415-DR01/OBS01</option>
+                                                                                                                                    <option value="16067312">BV-IP415-DR01/OBS02</option>
+                                                                                                                                    <option value="16067313">BV-IP415-DR01/OBS03</option>
+                                                                                                                                    <option value="16653708">BV-IP457-DR01/MEM01</option>
+                                                                                                                                    <option value="16653717">BV-IP457-DR01/MEM02</option>
+                                                                                                                                    <option value="16653719">BV-IP457-DR01/MEM03</option>
+                                                                                                                                    <option value="16653721">BV-IP457-DR01/MEM04</option>
+                                                                                                                                    <option value="16653722">BV-IP457-DR01/MEM05</option>
+                                                                                                                                    <option value="16653724">BV-IP457-DR01/MEM06</option>
+                                                                                                                                    <option value="17318393">BV-IP457-DR02/MEM01</option>
+                                                                                                                                    <option value="17318395">BV-IP457-DR02/MEM02</option>
+                                                                                                                                    <option value="16829671">BV-IP457-IS02/MEM01</option>
+                                                                                                                                    <option value="16829672">BV-IP457-IS02/MEM02</option>
+                                                                                                                                    <option value="16829674">BV-IP457-IS02/MEM03</option>
+                                                                                                                                    <option value="16829675">BV-IP457-IS02/MEM04</option>
+                                                                                                                                    <option value="16829676">BV-IP457-IS02/MEM05</option>
+                                                                                                                                    <option value="16868193">BV-IP457-IS03/MEM01</option>
+                                                                                                                                    <option value="16791803">BV-WO2639405-DV01/OBS01</option>
+                                                                                                                                    <option value="16791818">BV-WO2639405-DV01/OBS02</option>
+                                                                                                                                    <option value="16791824">BV-WO2639405-DV01/OBS03</option>
+                                                                                                                                    <option value="16791827">BV-WO2639405-DV01/OBS04</option>
+                                                                                                                                </select>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-4-0" class="colLeft"></td>
+                                                                                                                            <td id="bvform:_id446-4-1" class="colLeft"><span id="bvform:_id457"><input type="submit" value="Edit" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:editButton" id="bvform:editButton" class="iceCmdBtn"><input type="submit" value="Add" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:addButton" id="bvform:addButton" class="iceCmdBtn"></span></td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id488">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id489" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id489-0-0" class="headerLeft"><span id="bvform:_id490" class="menuHeaderText">Finding Search <a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span>
+                                                                                                </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id488-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id492" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id492-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id496">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-0-0" class="colLeft"><span id="bvform:_id497"><label id="bvform:_id498" class="formLabel">Reference</label></span></td>
+                                                                                                                            <td id="bvform:_id496-0-1" class="colLeft"><span id="bvform:child_60493">BV-IP415-DR01/OBS01</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-1-0" class="colLeft"><span id="bvform:_id504"><label id="bvform:_id505" class="formLabel">Service Type</label></span></td>
+                                                                                                                            <td id="bvform:_id496-1-1" class="colLeft"><span id="bvform:_id507"><span id="bvform:child_60498">Improvement Project</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-2-0" class="colLeft"><span id="bvform:_id516"><label id="bvform:_id517" class="formLabel">Performance Std Group</label></span></td>
+                                                                                                                            <td id="bvform:_id496-2-1" class="colLeft"><span id="bvform:_id519"><span id="bvform:child_60492"></span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-3-0" class="colLeft"><span id="bvform:_id538"><label id="bvform:_id539" class="formLabel">Performance Std</label></span></td>
+                                                                                                                            <td id="bvform:_id496-3-1" class="colLeft"><span id="bvform:_id541"><span id="bvform:child_60491"></span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-4-0" class="colLeft"><span id="bvform:_id560"><label id="bvform:_id561" class="formLabel">Finding Description</label></span></td>
+                                                                                                                            <td id="bvform:_id496-4-1" class="colLeft"><span id="bvform:child_60487">	In reference to:<br>	ROGE-E-DS-000013 Rev R1 &ndash; High Voltage Junction Box Data Sheet<br>	ADM-EML-2014-31190-1-002 Rev A &ndash; Performance Data of Motor<br>	Bureau Veritas carried out review and confirms following:<br>1.	HV Junction Boxes for connection of Oil Export Motors are specified for use in Zone 1 hazardous area with Ex e classification.<br>2.	New HV motor is specified for use in Zone 1 hazardous area with Ex pxe IIC T3 Gb classification. However there is no reference to an Ex certificate within the available documentation.<br><br>Customer is requested for the confirmation of the Certification for the HV Junction Boxes<br></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-5-0" class="colLeft"><span id="bvform:_id566"><label id="bvform:_id567" class="formLabel">Exam Date</label></span></td>
+                                                                                                                            <td id="bvform:_id496-5-1" class="colLeft"><span id="bvform:child_60486">09/02/2015</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-6-0" class="colLeft"><span id="bvform:_id574"><label id="bvform:_id575" class="formLabel">Auditor</label></span></td>
+                                                                                                                            <td id="bvform:_id496-6-1" class="colLeft"><span id="bvform:child_60475">WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-7-0" class="colLeft"><span id="bvform:_id578"><label id="bvform:_id579" class="formLabel">BV Responder</label></span></td>
+                                                                                                                            <td id="bvform:_id496-7-1" class="colLeft"><span id="bvform:child_60476">ACTON, David, dave.acton@au.bureauveritas.com</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-8-0" class="colLeft"><span id="bvform:_id582"><label id="bvform:_id583" class="formLabel">BV Responsible</label></span></td>
+                                                                                                                            <td id="bvform:_id496-8-1" class="colLeft"><span id="bvform:child_60477">CEGAR, Irena, irena.cegar@uk.bureauveritas.com</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-9-0" class="colLeft"><span id="bvform:_id586"><label id="bvform:_id587" class="formLabel">Category</label></span></td>
+                                                                                                                            <td id="bvform:_id496-9-1" class="colLeft"><span id="bvform:_id589"><span id="bvform:child_60478">Observation</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-10-0" class="colLeft"><span id="bvform:_id598"><label id="bvform:_id599" class="formLabel">Status</label></span></td>
+                                                                                                                            <td id="bvform:_id496-10-1" class="colLeft"><span id="bvform:_id601"><span id="bvform:child_60499">Open</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-11-0" class="colLeft"><span id="bvform:_id610"><label id="bvform:_id611" class="formLabel">Action Party</label></span></td>
+                                                                                                                            <td id="bvform:_id496-11-1" class="colLeft"><span id="bvform:child_60473">Nysted, Henrik, hnysted@hess.com</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-12-0" class="colLeft"><span id="bvform:_id614"><label id="bvform:_id615" class="formLabel">Response Date</label></span></td>
+                                                                                                                            <td id="bvform:_id496-12-1" class="colLeft"><span id="bvform:child_60495">10/03/2015</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-13-0" class="colLeft"><span id="bvform:_id622"><label id="bvform:_id623" class="formLabel">Completion Date</label></span></td>
+                                                                                                                            <td id="bvform:_id496-13-1" class="colLeft"><span id="bvform:child_60480">10/03/2015</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-14-0" class="colLeft"><span id="bvform:_id630"><label id="bvform:_id631" class="formLabel">Integrity/Equipment Issue</label></span></td>
+                                                                                                                            <td id="bvform:_id496-14-1" class="colLeft"><span id="bvform:child_60485">No</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-15-0" class="colLeft"><span id="bvform:_id639"><label id="bvform:_id640" class="formLabel">Paperwork / Process Issue</label></span></td>
+                                                                                                                            <td id="bvform:_id496-15-1" class="colLeft"><span id="bvform:child_60490">Yes</span></td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id658">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id659" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id659-0-0" class="headerLeft"><span id="bvform:_id660" class="menuHeaderText">Duty Holder and Bureau Veritas Comments <a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id658-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id662" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id662-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table cellspacing="0" cellpadding="0" id="bvform:_id666">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id666-0-0">
+                                                                                                                                <table width="100%" cellspacing="0" id="bvform:_id667" class="iceDatTbl">
+                                                                                                                                    <thead>
+                                                                                                                                        <tr>
+                                                                                                                                            <th class="iceDatTblColHdr1">Date</th>
+                                                                                                                                            <th class="iceDatTblColHdr2">Entered By</th>
+                                                                                                                                            <th class="iceDatTblColHdr1">Comments</th>
+                                                                                                                                            <th class="iceDatTblColHdr2">Attachments</th>
+                                                                                                                                        </tr>
+                                                                                                                                    </thead>
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr id="bvform:_id667:0" class="iceDatTblRow1">
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:0:child_dhbvc_date">10/02/2015</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:0:child_dhbvc_user">Jamie THOMSON</span></td>
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:0:child_dhbvc_comments">Action party changed from Henrik Nysted (Hess) to Jeppe Olander (Ramboll) based on client discussion during weekly progress meeting (09/02/15).</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:0:_id680"><table width="100%" cellspacing="0" id="bvform:_id667:0:child_dhbvc_doc"><tbody></tbody></table></span></td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr id="bvform:_id667:1" class="iceDatTblRow2">
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:1:child_dhbvc_date">17/02/2015</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:1:child_dhbvc_user">Jeppe Olander</span></td>
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:1:child_dhbvc_comments">It is noted. Rambøll will forward certificates when received from the junction box vendor.</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:1:_id680"><table width="100%" cellspacing="0" id="bvform:_id667:1:child_dhbvc_doc"><tbody></tbody></table></span></td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr id="bvform:_id667:2" class="iceDatTblRow1">
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:2:child_dhbvc_date">25/02/2015</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:2:child_dhbvc_user">Jeppe Olander</span></td>
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:2:child_dhbvc_comments">Please find attached documentation for the 11kV Junction box.</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:2:_id680"><a target="_blank" style="border: 0px;" href="/bvnet/downloads/1028837-SEMCO-Z-LA-0001%5BRev.0%5D.pdf?documentId=6770744.pdf&amp;isOnChildForm=true&amp;key1=Zm9ybUlkPTI2ODE%3D&amp;key2=Y2xpZW50SWQ9NjE1MQ%3D%3D" class="iceOutLnk"><img style="border: 0px;" src="images/pdf.gif" id="bvform:_id667:2:child_dhbvc_doc:0:_id686" class="iceGphImg" alt="">1028837-SEMCO-Z-LA-0001[Rev.0].pdf</a>
+<br>
+<a target="_blank" style="border: 0px;" href="/bvnet/downloads/282783602.zip?formDataId=282783602&amp;pid=166430&amp;isOnChildForm=true&amp;key1=Zm9ybUlkPTI2ODE%3D&amp;key2=Y2xpZW50SWQ9NjE1MQ%3D%3D" class="iceOutLnk"><img style="border: 0px;" src="images/icon-zip.png" id="bvform:_id667:2:_id697" class="iceGphImg" alt="Click to download all documents into a Zip"></a></span></td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr id="bvform:_id667:3" class="iceDatTblRow2">
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:3:child_dhbvc_date">02/03/2015</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:3:child_dhbvc_user">Maciej WYDRA</span></td>
+                                                                                                                                            <td class="iceDatTblCol1"><span id="bvform:_id667:3:child_dhbvc_comments">Document 1028837-SEMCO-Z-LA-0001 [Rev.0] was reviewed and it was confirmed that Junction Box and HCS heater carry appropriate ATEX Certification for use in zone 1 hazardous areas.<br>ATEX Certificate for Junction Box is DNV-2003-OSL-ATEX-0042 and its rated Ex e II T6/T5/T4<br>ATEX Certificate for HCS Heater is PTB 03 ATEX 1139 X and its rated Ex db IIC T4<br><br>Based on the evidence provided, this finding is now considered "Closed"</span></td>
+                                                                                                                                            <td class="iceDatTblCol2"><span id="bvform:_id667:3:_id680"><table width="100%" cellspacing="0" id="bvform:_id667:3:child_dhbvc_doc"><tbody></tbody></table></span></td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id709">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id710" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id710-0-0" class="headerLeft"><span id="bvform:_id711" class="menuHeaderText">Activity Details <a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id709-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id713" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id713-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id717">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-0-0" class="colLeft"><span id="bvform:_id718"><label id="bvform:_id719" class="formLabel">Closeout Date</label></span></td>
+                                                                                                                            <td id="bvform:_id717-0-1" class="colLeft"><span id="bvform:child_60479">02/03/2015</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-1-0" class="colLeft"><span id="bvform:_id726"><label id="bvform:_id727" class="formLabel">Modified By</label></span></td>
+                                                                                                                            <td id="bvform:_id717-1-1" class="colLeft">Yann ALBUCHER</td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-2-0" class="colLeft"><span id="bvform:_id730"><label id="bvform:_id731" class="formLabel">Last Modification Date</label></span></td>
+                                                                                                                            <td id="bvform:_id717-2-1" class="colLeft">02/03/2016</td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-3-0" class="colLeft"><span id="bvform:_id734"><label id="bvform:_id735" class="formLabel">Remedial Work Order</label></span></td>
+                                                                                                                            <td id="bvform:_id717-3-1" class="colLeft"><span id="bvform:child_60494"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-4-0" class="colLeft"><span id="bvform:_id740"><label id="bvform:_id741" class="formLabel">Risk Assessment Complete?</label></span></td>
+                                                                                                                            <td id="bvform:_id717-4-1" class="colLeft"><span id="bvform:child_60496">NA</span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-5-0" class="colLeft"><span id="bvform:_id749"><label id="bvform:_id750" class="formLabel">Are Contingency Action Adequate</label></span></td>
+                                                                                                                            <td id="bvform:_id717-5-1" class="colLeft"><span id="bvform:child_60474"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-6-0" class="colLeft"><span id="bvform:_id758"><label id="bvform:_id759" class="formLabel">Do You Wish to Send Action Party an Email Update?</label></span></td>
+                                                                                                                            <td id="bvform:_id717-6-1" class="colLeft"><span id="bvform:child_60497">Yes</span></td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div style="display:none;" id="bvformhdnFldsDiv"></div>
+                                                            </form>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        ;
+    </script>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:dynamic-code" type="text/javascript">
+        Ice.Focus.setFocus('loginForm:_id56'); //878217088
+    </script>
+    <noscript>&lt;meta content="0;url=/bvnet/xmlhttp/javascript-blocked" http-equiv="refresh" /&gt;</noscript>
+</body>
+
+</html>

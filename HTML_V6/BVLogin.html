@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="styles/bvnlogin.css">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.css">
+	<script src="scripts/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="body" class="login bgcover">
+		<div class="bvn-bg-slideshow">
+				<img alt="Logo" src="images/background/login-bg1.jpg">
+				<img alt="Logo" src="images/background/login-bg2.jpg">
+				<img alt="Logo" src="images/background/login-bg3.jpg">
+				<img alt="Logo" src="images/background/login-bg4.jpg">
+		</div>
+		
+        <div id="loginForm" class="login-box">
+            <form action="javascript:;" enctype="application/x-www-form-urlencoded" id="loginForm" method="post" onsubmit="return false;">
+                <div class="login-shadow"></div>
+                <div class="login-box-top bgcover">
+				
+                    <div class="login-box-top-img"><img alt="top image" src="images/login-box-top.png"></div>
+                </div>
+                <div class="login-header text-center">
+                    <img class="login-logo-bv" alt="Logo" src="images/login-bv-logo.png">
+                    <div class="login-title">BVnet<sup>2</sup></div>
+                </div>
+
+                <div class="login-body">
+                    <div class="login-intro-text text-center">Please enter your login</div>
+                    <div class="form-horizontal">
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input class="form-control" autofocus="" placeholder="User ID" name="j_username" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input class="form-control" placeholder="Password" name="j_password" type="password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-footer text-center clearfix">
+                    <div role="alert" class="alert alert-danger" style="display:none">
+                        <span id="loginForm:userLoginError"></span>
+                        <span id="loginForm:passwordLoginError"></span>
+                    </div>
+                    <input class="btn btn-lg btn-primary" value="Log in" type="submit">
+                    <a target="_blank" href="/bvnet/html/view/forgotPassword.iface">Forgot password?</a>
+
+                </div>
+            </form>
+        </div>
+        <div class="login-bottom-mask bgcover"></div>
+    </div>
+    <!--[if lte IE 9]>
+
+	<script type="text/javascript">
+  var htmlclass=document.createAttribute("class");
+    htmlclass.value="ie8";
+    document.getElementsByTagName("html")[0].setAttributeNode(htmlclass);
+  </script>
+<![endif]-->
+
+    <!--[if lte IE 9]>
+    <script src="scripts/jquery.placeholder.min.js"></script>
+    <script>
+        $(function(){
+            $('input').placeholder({ customClass: 'bvn-placeholder' });
+        });
+    </script>
+<![endif]-->
+
+<script type="text/javascript">
+var login = {
+	loginSlideShow : function() {
+		jQuery(".bvn-bg-slideshow > img:gt(0)").hide();
+		setInterval(function() {
+			jQuery('.bvn-bg-slideshow > img:first').fadeOut(1000).next()
+					.fadeIn(1000).end().appendTo('.bvn-bg-slideshow');
+		}, 10000);
+	}
+}
+
+jQuery(function() {
+  login.loginSlideShow();
+ });
+</script>
+
+</body>
+
+</html>

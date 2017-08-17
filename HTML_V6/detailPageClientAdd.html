@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html id="document:html" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- start: change meta type to edge. added by rajneesh -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- end -->
+    <meta content="BVNETV2-APPLICATION" name="bureauveritas-description">
+    <meta content="5.1.2-SNAPSHOT" name="Application-Version">
+    <link href="styles/royale.css" rel="stylesheet" type="text/css">
+    <link href="styles/bvnet.css" rel="stylesheet" type="text/css">
+    <link href="fonts/icomoon-fonts/style.css" rel="stylesheet" >
+    <script src="scripts/fixsearchheader.js" type="text/javascript"></script>
+    <script src="./BVnet_files/DownloadExcel.js" type="text/javascript"></script>
+    <script src="./BVnet_files/filterForm.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.theme.fint.js" type="text/javascript"></script>
+    <script src="./BVnet_files/validation.js" type="text/javascript"></script>
+    <script src="./BVnet_files/jumploader.js" type="text/javascript"></script>
+    <script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <title id="document:title">BVnet</title>
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        function appletInitialized(applet) {
+            enableStatusChange();
+            //applet.getViewConfig().setFileListViewLocationBarVisible(true);
+            //applet.getViewConfig().setMainViewFileListViewVisible(true);
+            jQuery.post("/bvnet/createUploadFolderServlet");
+            applet.getUploaderConfig().setUploadUrl('ftp://bvnet2uploader:KLfed659uplKN6@bvnet2-uat.bureauveritas.com:990/VbIERyNLhNbvCdKRLCt13TxI.3a1dcdb6-8132-34c5-9568-83c31c7c98e7?passive"');
+            applet.getMainView().updateView();
+        }
+    </script>
+    <script src="scripts/custom.js" type="text/javascript"></script>
+
+    <meta content="Rendered by ICEFaces D2D" name="icefaces">
+    <script src="./BVnet_files/icefaces-d2d.js" type="text/javascript"></script>
+    <script src="./BVnet_files/ice-extras.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        try {
+            document.execCommand('BackgroundImageCache', false, true);
+        } catch (e) {}
+    </script>
+</head>
+
+<body class="" id="document:body">
+    <iframe frameborder="0" id="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" name="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" src="./BVnet_files/blank.html" style="z-index: 10000; visibility: hidden; width: 0; height: 0; position: absolute; opacity: 0.22; filter: alpha(opacity=22);" title="Icefaces Redirect"></iframe>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:configuration-script" type="text/javascript">
+        if (!window.sessions) window.sessions = [];
+        window.sessions.push('0BNCDGaNyRt8eadp9c2u2A');
+        window.disposeViewsURI = '/bvnet/block/dispose-views';
+        var container = '0BNCDGaNyRt8eadp9c2u2A:1:configuration-script'.asElement().parentNode;
+        container.bridge = new Ice.Community.Application({
+            session: '0BNCDGaNyRt8eadp9c2u2A',
+            view: 1,
+            synchronous: true,
+            connectionLostRedirectURI: null,
+            sessionExpiredRedirectURI: null,
+            connection: {
+                context: {
+                    current: '/bvnet/',
+                    async: '/bvnet/'
+                },
+                timeout: 300000,
+                heartbeat: {
+                    interval: 20000,
+                    timeout: 15000,
+                    retries: 5
+                }
+            },
+            messages: {
+                sessionExpired: 'User Session Expired',
+                connectionLost: 'Network Connection Interrupted',
+                serverError: 'Server Internal Error',
+                description: 'To reconnect click the Reload button on the browser or click the button below',
+                buttonText: 'Reload'
+            }
+        }, container);
+    </script>
+    <div class="bvn-banner-wrapper">
+        <iframe class="bvn-banner" height="100%" width="100%" frameborder="0" id="component-1005" src="https://maestro-cer-uat.bureauveritas.com/static/banner/en/index.html" style="height: 200px;"></iframe>
+        <img class="bvn-client-logo" alt="BVNet logo" id="_id31" src="images/HessLogo.gif">
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td class="bvn-nopictureBackground" width="100%">
+                    <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                        <table border="0" cellpadding="0" cellspacing="0" id="_id28" width="100%" class="bvn-header">
+                            <tbody>
+                                <tr>
+                                    <td id="_id28-0-0" class="headerLeft">
+                                        <div class="bvn-logo"><img src="images/bvnetlogo.png" alt="BVNet logo"></div>
+                                    </td>
+                                    <td class="headerCenter">
+                                        <div class="bvn-dropdown">
+                                            <ul class="bvn-dropitem">
+                                                <li class="bvn-useritem">
+                                                    <a id="userbtn" href="#">User NAME <i class="bvn-icon icon-arrow-down"></i></a>
+                                                    <ul class="bvn-subitem">
+                                                        <li class="bvn-logout"><a id="menu:_id412" href="/bvnet/html/view/logout.jsp"><span id="menu:logoutSelect" class="Menuitem-Gray">Logout</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="bvn-banneritem">
+                                                    <a id="userbtn" href="#"><i class="bvn-icon icon-arrow-up"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="headerRight" id="_id28-0-1"><img alt="logo" src="images/toolbar-logo-veritas-red.jpg"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </jsp:root>
+                    <table class="icePnlGrd bvn-panel-wrapper" id="_id46" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="icePnlGrdRow1">
+                                <td class="icePnlGrdCol menuCol bvn-left-panel" id="_id46-0-0">
+                                    <div class="bvn-wrapper-left-panel" style="overflow:auto;">
+                                        <!-- rajneesh: windows/document height needs to calculate (height:744px;) -->
+                                        <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                                            <form action="javascript:;" class="iceFrm" enctype="application/x-www-form-urlencoded" id="menu" method="post" onsubmit="return false;">
+                                                <script type="text/javascript">
+                                                    $element(document.getElementById('menu')).captureAndRedirectSubmit();
+                                                </script>
+                                                <input name="menu" type="hidden" value="menu">
+                                                <input name="icefacesCssUpdates" type="hidden" value="">
+                                                <table cellpadding="0" cellspacing="0" id="menu:_id49" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="menuExpandCol" id="menu:_id49-0-0">
+                                                                <div class="icePnlGrp" id="menu:_id50" style="display:none">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <input id="menu:_id52" name="menu:_id52" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-right.png" type="image">
+                                                                </div>
+                                                            </td>
+                                                            <td class="menuCol" id="menu:_id49-0-1">
+                                                                <div class="icePnlGrp leftNav" id="menu:_id53">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <table id="menu:_id54" width="100%">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="menuHeader" colspan="1" scope="colgroup">
+                                                                                    <table class="icePnlGrd" id="menu:_id55" width="100%">
+                                                                                        <tbody>
+                                                                                            <tr class="icePnlGrdRow1">
+                                                                                                <td class="icePnlGrdCol headerLeft" id="menu:_id55-0-0"><span class="menuHeaderText" id="menu:menuHeaderText">Menu</span></td>
+                                                                                                <td class="icePnlGrdCol headerRight" id="menu:_id55-0-1">
+                                                                                                    <input id="menu:menuArrowClose" name="menu:menuArrowClose" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-left.png" type="image">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td id="menu:_id54-0-0">
+                                                                                    <table id="menu:_id58" class="menuBorder" cellpadding="0" cellspacing="0">
+                                                                                        <tbody>
+                                                                                            <!-- Rajneesh: commented
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-0-0">
+                                                                                                    <div id="menu:connectionStatus" class="iceOutConStat">
+                                                                                                        <div id="menu:connectionStatus:connection-idle" class="iceOutConStatInactv" style="visibility: visible;"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-working" class="iceOutConStatActv"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-trouble" class="iceOutConStatCaution"></div>
+                                                                                                        <div style="visibility: hidden;" id="menu:connectionStatus:connection-lost" class="iceOutConStatDisconnect">An error has occurred. Click here to login</div>
+                                                                                                        <script type="text/javascript">
+                                                                                                            'menu:connectionStatus'.asExtendedElement().findContainerFor('bridge').bridge.attachStatusManager(function (defaultStatusManager) {
+                                                                                                                return new Ice.Status.ComponentStatusManager('menu:connectionStatus:connection-working', 'menu:connectionStatus:connection-idle', 'menu:connectionStatus:connection-trouble', 'menu:connectionStatus:connection-lost', defaultStatusManager, false, false);
+                                                                                                            });
+                                                                                                        </script>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-1-0">
+                                                                                                    <script type="text/javascript">
+                                                                                                        document.getElementById('menu:connectionStatus:connection-lost').onclick = function () {
+                                                                                                            location.reload(true);
+                                                                                                        }
+                                                                                                    </script>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-2-0">
+                                                                                                    <div style="padding: 7px; margin: 0px;"></div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            -->
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-3-0">
+                                                                                                    <div class="gsd-left-search"><span id="menu:_id65"><span id="menu:_id66" class="greyboldmenu">Select Project</span>
+                                                                                                        <select style="width:125px;font-size:7pt;font-family:Arial;" size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="menu:projectSelect" id="menu:projectSelect" class="iceSelOneMnu">
+                                                                                                            <option value="166428">BP</option>
+                                                                                                            <option value="166430" selected="selected">Hess Denmark</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                        <span id="menu:_id71"><span id="menu:_id72" class="greyboldmenu">Select Client</span>
+                                                                                                        <select style="width:125px;font-size:7pt;font-family:Arial;" size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="menu:clientSelect" id="menu:clientSelect" class="iceSelOneMnu">
+                                                                                                            <option value="6151" selected="selected">Hess Denmark</option>
+                                                                                                            <option value="7189">Yann - Client 1</option>
+                                                                                                            <option value="7190">Yann - Client 2</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-4-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id77';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id77" href="javascript:;"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-home"></i>Home</span></a></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-5-0">
+                                                                                                    <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"></jsp:root>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-6-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id96';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id96" href="javascript:;"><span id="menu:_id79:0:_id97" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Production Data</span></a>
+                                                                                                    <div id="menu:_id79:0:_id98" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id79:0:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:0:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:0:_id101';form['formId'].value='2587';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:0:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:0:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Asset Profile</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:1:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:1:_id105';form['formId'].value='2587';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:1:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:1:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Asset Profile Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:2:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:2:_id101';form['formId'].value='2588';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:2:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:2:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Platform Profile</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:3:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:3:_id105';form['formId'].value='2588';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:3:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:3:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Platform Profile Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:4:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:4:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:4:_id101';form['formId'].value='2589';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:4:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:4:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:5:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:5:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:5:_id105';form['formId'].value='2589';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:5:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:5:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Report Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:6:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td class="bvn-active" id="menu:_id79:0:_id99:6:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:6:_id101';form['formId'].value='2590';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:6:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:6:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:7:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:7:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:7:_id105';form['formId'].value='2590';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:7:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:7:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Findings Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:8:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:8:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:8:_id105';form['formId'].value='2590';form['myFindings'].value='true';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:8:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:8:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>My Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:9:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:9:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:9:_id101';form['formId'].value='2580';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:9:_id101" href="javascript:;"><span id="menu:_id79:0:_id99:9:_id103" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-edit-add"></i>Project Information</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:10:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:10:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:0:_id99:10:_id105';form['formId'].value='2580';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:0:_id99:10:_id105" href="javascript:;"><span id="menu:_id79:0:_id99:10:_id106" class="Menuitem-Gray bvn-menu-icons "><i class="bvn-icon icon-search"></i>Project Information Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                    <a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id96';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id96" href="javascript:;"><span id="menu:_id79:1:_id97" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Reference Table</span></a>
+                                                                                                    <div id="menu:_id79:1:_id98" class="icePnlGrp leftNav" style="display:none">
+                                                                                                        <table id="menu:_id79:1:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:0:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:0:_id101';form['formId'].value='2582';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:0:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:0:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Examination / Audit Type</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:1:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:1:_id105';form['formId'].value='2582';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:1:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:1:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Examination / Audit Type Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:2:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:2:_id101';form['formId'].value='2581';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:2:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:2:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Finding Category</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:3:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:3:_id105';form['formId'].value='2581';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:3:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:3:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Finding Category Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:4:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:4:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:4:_id101';form['formId'].value='2585';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:4:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:4:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Performance Standard Group</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:5:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:5:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:5:_id105';form['formId'].value='2585';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:5:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:5:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Performance Standard Group Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:6:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:6:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:6:_id101';form['formId'].value='2586';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:6:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:6:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Performance Std</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:7:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:7:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:7:_id105';form['formId'].value='2586';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:7:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:7:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Performance Std Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:8:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:8:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:8:_id101';form['formId'].value='2583';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:8:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:8:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Service Type</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:9:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:9:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:9:_id105';form['formId'].value='2583';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:9:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:9:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Service Type Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:10:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:10:_id100-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:10:_id101';form['formId'].value='2584';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:10:_id101" href="javascript:;"><span id="menu:_id79:1:_id99:10:_id103" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Status</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:11:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:11:_id104-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id79:1:_id99:11:_id105';form['formId'].value='2584';form['myFindings'].value='false';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id79:1:_id99:11:_id105" href="javascript:;"><span id="menu:_id79:1:_id99:11:_id106" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Status Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-7-0">
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-8-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id141';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id141" href="javascript:;"><span id="menu:_id142" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Stats</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id143" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id145">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id145-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id146';form['action'].value='stats/trend';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id146" href="javascript:;"><span id="menu:_id148" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Historic Trend</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id150">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id150-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id151';form['action'].value='stats/finding';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id151" href="javascript:;"><span id="menu:_id153" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Findings Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id155">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id155-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id156';form['action'].value='stats/actionParty';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id156" href="javascript:;"><span id="menu:_id158" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Action Party Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-9-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id180';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id180" href="javascript:;"><span id="menu:_id181" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Admin</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id182" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id187">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id187-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id188';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id188" href="javascript:;"><span id="menu:_id189" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>UK Project Setup</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id194">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id194-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id195';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id195" href="javascript:;"><span id="menu:adminSelectreferenceSetup" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Reference Setup</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id203">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id203-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id204';form['paramTypeId'].value='0';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id204" href="javascript:;"><span id="menu:adminSelectAccessStats" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Access Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id207">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id207-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id208';form['reportName'].value='BV Users Search';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id208" href="javascript:;"><span id="menu:adminSelectBVuserSearch" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>BV Users Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id211">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id211-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id212';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id212" href="javascript:;"><span id="menu:adminSelectBVuserAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>BV User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id214">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id214-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id215';form['reportName'].value='Client User Search';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id215" href="javascript:;"><span id="menu:adminSelectclientuserSearch" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client User Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id218">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id218-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id219';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id219" href="javascript:;"><span id="menu:adminSelectclientuserAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id221">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id221-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id222';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id222" href="javascript:;"><span id="menu:adminSelectclientAdmin" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Client Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id227">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id227-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id228';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id228" href="javascript:;"><span id="menu:adminSelecthomepage" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Edit Home Page</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-10-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id287';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id287" href="javascript:;"><span id="menu:_id288" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Layout</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id289" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id294">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id294-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id295';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id295" href="javascript:;"><span id="menu:layoutSelectreports" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Reports</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-11-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id332';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id332" href="javascript:;"><span id="menu:_id333" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Security</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id334" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id335">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id335-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id336';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id336" href="javascript:;"><span id="menu:securitySelectprofiles" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profiles</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id337">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id337-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id338';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id338" href="javascript:;"><span id="menu:securitySelectprofileAccess" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profile Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id339">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id339-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id340';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id340" href="javascript:;"><span id="menu:securitySelectprofilefieldaccess" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Profile Field Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-12-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id366';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id366" href="javascript:;"><span id="menu:_id367" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Maintenance</span></a>
+                                                                                                    <div style="display:none;" id="menu:_id368" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:Maintenance:9:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:9:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:9:_id370';form['formId'].value='2589';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:9:_id370" href="javascript:;"><span id="menu:Maintenance:9:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:10:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:10:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:10:_id370';form['formId'].value='2590';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:10:_id370" href="javascript:;"><span id="menu:Maintenance:10:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Findings</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:11:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:11:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:11:_id370';form['formId'].value='2680';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:11:_id370" href="javascript:;"><span id="menu:Maintenance:11:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Delete Mitigation/ Contingency Action</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:12:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:12:_id369-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:Maintenance:12:_id370';form['formId'].value='2681';form['reportPath'].value='/report';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:Maintenance:12:_id370" href="javascript:;"><span id="menu:Maintenance:12:Delete" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-addment"></i>Delete Duty Holder and Bureau Veritas Comments</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id377">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id377-0-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id378';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id378" href="javascript:;"><span id="menu:clearCache" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-addment"></i>Clear cache</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!-- Rajneesh: commented login
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-13-0"><a onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['menu:_idcl'].value='menu:_id408';return iceSubmit(form,this,event);" onblur="setFocus('');" id="menu:_id408" href="javascript:;"><span id="menu:_id409" class="redboldmenu bvn-menu-icons">Session</span></a>
+                                                                                                    <div id="menu:_id410" class="icePnlGrp leftNav">
+                                                                                                        <table id="menu:_id411">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id411-0-0"><a id="menu:_id412" href="/bvnet/html/view/logout.jsp"><span id="menu:logoutSelect" class="Menuitem-Gray">Logout</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+-->
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <!--
+                                                                        <tr>
+                                                                            <td id="menu:_id54-1-0">
+                                                                                <table cellpadding="0" cellspacing="0" id="menu:_id419" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr style="display: none;">
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td class="menuFooter" colspan="1">
+                                                                                                <table class="icePnlGrd" id="menu:_id420" width="100%">
+                                                                                                    <tbody>
+                                                                                                        <tr style="display: none;">
+                                                                                                            <td></td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        -->
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div id="menuhdnFldsDiv" style="display:none;">
+                                                    <input name="formId" type="hidden">
+                                                    <input name="myFindings" type="hidden">
+                                                    <input name="reportName" type="hidden">
+                                                    <input name="reportPath" type="hidden">
+                                                    <input name="paramTypeId" type="hidden">
+                                                    <input name="menu:_idcl" type="hidden">
+                                                </div>
+                                            </form>
+                                        </jsp:root>
+                                    </div>
+                                </td>
+                                <td class="icePnlGrdCol pageCol bvn-right-panel" id="_id46-0-1">
+                                    <div class="bvn-wrapper-right-panel" style="overflow: auto;">
+                                        <!-- rajneesh: windows/document height needs to calculate (height:740px; ) -->
+                                        <div class="bvn-page-title">
+                                            <table id="_id423:_id424" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="_id423:_id424-0-0">
+                                                            <div class="sectionTitle">Findings</div>
+                                                        </td>
+                                                        <td id="_id423:_id424-0-2" align="right">
+                                                            <a style="text-decoration:none;" onfocus="setFocus(this.id);" onclick="var form=formOf(this);form['_id423:_idcl'].value='_id423:_id434';form['formId'].value='2590';return iceSubmit(form,this,event);" onblur="setFocus('');" id="_id423:_id434" href="javascript:;" class="iceCmdBtn bvn-button"><i class="icon-triangle-left"></i> Return</a>
+                                                            <a onfocus="setFocus(this.id);" onclick="window.open('/bvnet/html/view/form.iface?pv=1&amp;pd=1');;var form=formOf(this);form['_id423:_idcl'].value='_id423:_id429';return iceSubmitPartial(form,this,event);" onblur="setFocus('');" id="_id423:_id429" href="javascript:;" class="iceCmdLnk bvn-button"><i class="icon-print"></i> Print </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul id="_id426" style="display:none;">
+                                            <li></li>
+                                        </ul>
+
+                                        <table width="100%" cellspacing="0" cellpadding="0" id="_id437">
+                                            <tbody>
+                                                <tr>
+                                                    <td id="_id437-0-0">
+                                                        <div class="bvn-detail-form">
+                                                            <form onsubmit="return false;" id="bvform" class="iceFrm" action="javascript:;" enctype="application/x-www-form-urlencoded" method="post">
+                                                                <script type="text/javascript">
+                                                                    $element(document.getElementById('bvform')).captureAndRedirectSubmit();
+                                                                </script>
+                                                                <input type="hidden" value="bvform" name="bvform">
+                                                                <input type="hidden" value="" name="icefacesCssUpdates">
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id438">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id439">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id439-0-0" class="headerLeft"><span id="bvform:_id440" class="menuHeaderText">Segmentation Selection</span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id438-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id442" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id442-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id446">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-0-0" class="colLeft"></td>
+                                                                                                                            <td id="bvform:_id446-0-1" class="colLeft"><span id="bvform:segmentationsMessage"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-1-0" class="colLeft"><span id="bvform:_id449" class="formLabe2">Asset</span></td>
+                                                                                                                            <td id="bvform:_id446-1-1" class="colLeft">
+                                                                                                                                <select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:level1" id="bvform:level1" disabled="disabled" class="iceSelOneMnu-dis">
+                                                                                                                                    <option value="3369544" selected="selected">South Arne</option>
+                                                                                                                                </select>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id446-2-0" class="colLeft"><span id="bvform:_id451" class="formLabe2">Platform</span></td>
+                                                                                                                            <td id="bvform:_id446-2-1" class="colLeft">
+                                                                                                                                <select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:level2" id="bvform:level2" disabled="disabled" class="iceSelOneMnu-dis">
+                                                                                                                                    <option value="3369545" selected="selected">SA Main Platform</option>
+                                                                                                                                    <option value="3382208">SA Wellhead Platform East</option>
+                                                                                                                                    <option value="3382209">SA Wellhead Platform North</option>
+                                                                                                                                </select>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id488">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id489" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id489-0-0" class="headerLeft"><span id="bvform:_id490" class="menuHeaderText">Finding Search<a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id488-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id492" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id492-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id496">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-0-0" class="colLeft"><span id="bvform:_id497"><label id="bvform:_id498" class="formLabel">Reference</label>
+<span style="color: red" id="bvform:_id499">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-0-1" class="colLeft"><span id="bvform:_id502"><input type="text" value="" onmousedown=";this.focus();" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60493" maxlength="50" id="bvform:child_60493" class="iceInpTxt"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-1-0" class="colLeft"><span id="bvform:_id504"><label id="bvform:_id505" class="formLabel">Service Type</label>
+<span style="color: red" id="bvform:_id506">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-1-1" class="colLeft"><span id="bvform:_id512"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60498" id="bvform:child_60498"><option value="">----</option>
+<option value="16546718">Annual Survey Below Water</option>
+<option value="16546717">Annual Survey Topside Facilities</option>
+<option value="16798367">Certification</option>
+<option value="16072390">Familiarisation Visit</option>
+<option value="16067338">Improvement Project</option>
+<option value="15722806">Performance Standard Review</option>
+<option value="17220907">QA/QC</option>
+<option value="16798403">QCL1/QCL2 Inspection</option>
+<option value="16546721">Verification of RMR's</option></select></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-2-0" class="colLeft"><span id="bvform:_id516"><label id="bvform:_id517" class="formLabel">Performance Std Group</label></span></td>
+                                                                                                                            <td id="bvform:_id496-2-1" class="colLeft"><span id="bvform:_id524"><span id="bvform:_id526"><select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:child_60492" id="bvform:child_60492" class="iceSelOneMnu"><option value="60492">----</option>
+<option value="257051150">Evacuation, Escape &amp; Rescue</option>
+<option value="253700521">Hazard Control</option>
+<option value="257051149">Hazard Mitigation</option>
+<option value="257051151">Hazard Prevention</option>
+<option value="259608013">N/A</option>
+<option value="295262650">Perf Std 1</option></select></span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-3-0" class="colLeft"><span id="bvform:_id538"><label id="bvform:_id539" class="formLabel">Performance Std</label></span></td>
+                                                                                                                            <td id="bvform:_id496-3-1" class="colLeft"><span id="bvform:_id546"><span id="bvform:_id548"><select size="1" onfocus="setFocus(this.id);" onchange="setFocus('');iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:child_60491" id="bvform:child_60491" class="iceSelOneMnu"></select></span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-4-0" class="colLeft"><span id="bvform:_id560"><label id="bvform:_id561" class="formLabel">Finding Description</label></span></td>
+                                                                                                                            <td id="bvform:_id496-4-1" class="colLeft">
+                                                                                                                                <textarea rows="2" onmousedown=";this.focus();" name="bvform:_child_60487" maxlength="4000" id="bvform:_child_60487" cols="20" class="formInpTxtArea"></textarea>
+                                                                                                                                <span id="bvform:_id565"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-5-0" class="colLeft"><span id="bvform:_id566"><label id="bvform:_id567" class="formLabel">Exam Date</label>
+<span style="color: red" id="bvform:_id568">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-5-1" class="colLeft"><span id="bvform:_id571"><table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id572"><tbody><tr><td id="bvform:_id572-0-0"><div onkeyup="onKeyDownLimitLengthDate('child_60486');" id="bvform:child_60486_rootDiv" class="iceSelInpDatePopup"><input type="text" value="" onkeypress="iceSubmit(form,this,event);" onfocus="setFocus('');" onblur="setFocus('');iceSubmitPartial(form, this, event);" name="bvform:child_60486" id="bvform:child_60486" class="iceSelInpDateInput"><input type="image" title="Open popup calendar" src="images/calendar.png" onfocus="setFocus('');" onclick="document.forms['bvform']['bvform:_idcl'].value='bvform:child_60486_calendarButton';document.forms['bvform']['bvform:_idbvform:child_60486showPopup'].value='toggle';iceSubmitPartial( document.forms['bvform'], this,event); return false;" name="bvform:child_60486_calendarButton" id="bvform:child_60486_calendarButton" alt="Open popup calendar"></div></td><td id="bvform:_id572-0-1"></td></tr></tbody></table></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-6-0" class="colLeft"><span id="bvform:_id574"><label id="bvform:_id575" class="formLabel">Auditor</label></span></td>
+                                                                                                                            <td id="bvform:_id496-6-1" class="colLeft"><span id="bvform:_id913"><span id="bvform:_id914"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60475" id="bvform:child_60475"><option value="">----</option>
+<option value="ACTON, David, dave.acton@au.bureauveritas.com">ACTON, David, dave.acton@au.bureauveritas.com</option>
+<option value="Amobi, Iyki, iyki.amobi@uk.bureauveritas.com">Amobi, Iyki, iyki.amobi@uk.bureauveritas.com</option>
+<option value="Auditor, Historical, historical.auditor@uk.bureauveritas.com">Auditor, Historical, historical.auditor@uk.bureauveritas.com</option>
+<option value="CEGAR, Irena, irena.cegar@uk.bureauveritas.com">CEGAR, Irena, irena.cegar@uk.bureauveritas.com</option>
+<option value="CEGAR, Petar, petar.cegar@uk.bureauveritas.com">CEGAR, Petar, petar.cegar@uk.bureauveritas.com</option>
+<option value="Dembo, Musa, musa.dembo@uk.bureauveritas.com">Dembo, Musa, musa.dembo@uk.bureauveritas.com</option>
+<option value="GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)">GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Goodley, Colin, colin.goodley@uk.bureauveritas.com">Goodley, Colin, colin.goodley@uk.bureauveritas.com</option>
+<option value="HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com">HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com</option>
+<option value="HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)">HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)</option>
+<option value="HUNTER, Lee, lee.hunter@uk.bureauveritas.com">HUNTER, Lee, lee.hunter@uk.bureauveritas.com</option>
+<option value="JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com">JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com</option>
+<option value="LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com">LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com</option>
+<option value="MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com">MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com</option>
+<option value="MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)">MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com">Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com</option>
+<option value="Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com">Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com</option>
+<option value="NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com">NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com</option>
+<option value="NOBLE, William, bill.noble@uk.bureauveritas.com">NOBLE, William, bill.noble@uk.bureauveritas.com</option>
+<option value="Nazzari, Idin, idin.nazzari@uk.bureauveritas.com">Nazzari, Idin, idin.nazzari@uk.bureauveritas.com</option>
+<option value="SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com">SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com</option>
+<option value="STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)">STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)</option>
+<option value="STONE, Martin, martin.stone@uk.bureauveritas.com">STONE, Martin, martin.stone@uk.bureauveritas.com</option>
+<option value="Simpson, Lisa, lisa.simpson@uk.bureauveritas.com">Simpson, Lisa, lisa.simpson@uk.bureauveritas.com</option>
+<option value="THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)">THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)</option>
+<option value="TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)">TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)</option>
+<option value="UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com">UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com</option>
+<option value="WATT, Gordon, gordon.watt@uk.bureauveritas.com">WATT, Gordon, gordon.watt@uk.bureauveritas.com</option>
+<option value="WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com">WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com</option></select>
+<br><input type="checkbox" onfocus="setFocus(this.id);" onclick="iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:popup-child_60475" id="bvform:popup-child_60475" class="iceSelBoolChkbx">Use popup</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-7-0" class="colLeft"><span id="bvform:_id578"><label id="bvform:_id579" class="formLabel">BV Responder</label>
+<span style="color: red" id="bvform:_id580">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-7-1" class="colLeft"><span id="bvform:_id921"><span id="bvform:_id922"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60476" id="bvform:child_60476"><option value="">----</option>
+<option value="ACTON, David, dave.acton@au.bureauveritas.com">ACTON, David, dave.acton@au.bureauveritas.com</option>
+<option value="Amobi, Iyki, iyki.amobi@uk.bureauveritas.com">Amobi, Iyki, iyki.amobi@uk.bureauveritas.com</option>
+<option value="CEGAR, Irena, irena.cegar@uk.bureauveritas.com">CEGAR, Irena, irena.cegar@uk.bureauveritas.com</option>
+<option value="CEGAR, Petar, petar.cegar@uk.bureauveritas.com">CEGAR, Petar, petar.cegar@uk.bureauveritas.com</option>
+<option value="Dembo, Musa, musa.dembo@uk.bureauveritas.com">Dembo, Musa, musa.dembo@uk.bureauveritas.com</option>
+<option value="GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)">GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Goodley, Colin, colin.goodley@uk.bureauveritas.com">Goodley, Colin, colin.goodley@uk.bureauveritas.com</option>
+<option value="HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com">HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com</option>
+<option value="HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)">HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)</option>
+<option value="HUNTER, Lee, lee.hunter@uk.bureauveritas.com">HUNTER, Lee, lee.hunter@uk.bureauveritas.com</option>
+<option value="JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com">JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com</option>
+<option value="LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com">LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com</option>
+<option value="MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com">MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com</option>
+<option value="MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)">MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com">Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com</option>
+<option value="Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com">Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com</option>
+<option value="NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com">NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com</option>
+<option value="NOBLE, William, bill.noble@uk.bureauveritas.com">NOBLE, William, bill.noble@uk.bureauveritas.com</option>
+<option value="Nazzari, Idin, idin.nazzari@uk.bureauveritas.com">Nazzari, Idin, idin.nazzari@uk.bureauveritas.com</option>
+<option value="SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com">SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com</option>
+<option value="STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)">STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)</option>
+<option value="STONE, Martin, martin.stone@uk.bureauveritas.com">STONE, Martin, martin.stone@uk.bureauveritas.com</option>
+<option value="Simpson, Lisa, lisa.simpson@uk.bureauveritas.com">Simpson, Lisa, lisa.simpson@uk.bureauveritas.com</option>
+<option value="THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)">THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)</option>
+<option value="TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)">TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)</option>
+<option value="UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com">UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com</option>
+<option value="WATT, Gordon, gordon.watt@uk.bureauveritas.com">WATT, Gordon, gordon.watt@uk.bureauveritas.com</option>
+<option value="WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com">WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com</option></select>
+<br><input type="checkbox" onfocus="setFocus(this.id);" onclick="iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:popup-child_60476" id="bvform:popup-child_60476" class="iceSelBoolChkbx">Use popup</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-8-0" class="colLeft"><span id="bvform:_id582"><label id="bvform:_id583" class="formLabel">BV Responsible</label>
+<span style="color: red" id="bvform:_id584">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-8-1" class="colLeft"><span id="bvform:_id929"><span id="bvform:_id930"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60477" id="bvform:child_60477"><option value="">----</option>
+<option value="ACTON, David, dave.acton@au.bureauveritas.com">ACTON, David, dave.acton@au.bureauveritas.com</option>
+<option value="Amobi, Iyki, iyki.amobi@uk.bureauveritas.com">Amobi, Iyki, iyki.amobi@uk.bureauveritas.com</option>
+<option value="CEGAR, Irena, irena.cegar@uk.bureauveritas.com">CEGAR, Irena, irena.cegar@uk.bureauveritas.com</option>
+<option value="CEGAR, Petar, petar.cegar@uk.bureauveritas.com">CEGAR, Petar, petar.cegar@uk.bureauveritas.com</option>
+<option value="Dembo, Musa, musa.dembo@uk.bureauveritas.com">Dembo, Musa, musa.dembo@uk.bureauveritas.com</option>
+<option value="GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)">GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Goodley, Colin, colin.goodley@uk.bureauveritas.com">Goodley, Colin, colin.goodley@uk.bureauveritas.com</option>
+<option value="HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com">HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com</option>
+<option value="HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)">HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)</option>
+<option value="HUNTER, Lee, lee.hunter@uk.bureauveritas.com">HUNTER, Lee, lee.hunter@uk.bureauveritas.com</option>
+<option value="JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com">JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com</option>
+<option value="LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com">LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com</option>
+<option value="MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com">MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com</option>
+<option value="MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)">MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com">Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com</option>
+<option value="Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com">Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com</option>
+<option value="NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com">NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com</option>
+<option value="NOBLE, William, bill.noble@uk.bureauveritas.com">NOBLE, William, bill.noble@uk.bureauveritas.com</option>
+<option value="Nazzari, Idin, idin.nazzari@uk.bureauveritas.com">Nazzari, Idin, idin.nazzari@uk.bureauveritas.com</option>
+<option value="SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com">SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com</option>
+<option value="STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)">STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)</option>
+<option value="STONE, Martin, martin.stone@uk.bureauveritas.com">STONE, Martin, martin.stone@uk.bureauveritas.com</option>
+<option value="Simpson, Lisa, lisa.simpson@uk.bureauveritas.com">Simpson, Lisa, lisa.simpson@uk.bureauveritas.com</option>
+<option value="THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)">THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)</option>
+<option value="TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)">TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)</option>
+<option value="UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com">UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com</option>
+<option value="WATT, Gordon, gordon.watt@uk.bureauveritas.com">WATT, Gordon, gordon.watt@uk.bureauveritas.com</option>
+<option value="WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com">WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com</option></select>
+<br><input type="checkbox" onfocus="setFocus(this.id);" onclick="iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:popup-child_60477" id="bvform:popup-child_60477" class="iceSelBoolChkbx">Use popup</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-9-0" class="colLeft"><span id="bvform:_id586"><label id="bvform:_id587" class="formLabel">Category</label>
+<span style="color: red" id="bvform:_id588">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-9-1" class="colLeft"><span id="bvform:_id594"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60478" id="bvform:child_60478"><option value="">----</option>
+<option value="16067304">Memoranda</option>
+<option value="16067341">Observation</option>
+<option value="16067305">Recommendation</option>
+<option value="15722804">Test category1</option></select></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-10-0" class="colLeft"><span id="bvform:_id598"><label id="bvform:_id599" class="formLabel">Status</label>
+<span style="color: red" id="bvform:_id600">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-10-1" class="colLeft"><span id="bvform:_id606"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60499" id="bvform:child_60499"><option value="">----</option>
+<option value="15722776">Closed Out</option>
+<option value="18027633">Not Tracked</option>
+<option value="15722775">Open</option></select></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-11-0" class="colLeft"><span id="bvform:_id610"><label id="bvform:_id611" class="formLabel">Action Party</label>
+<span style="color: red" id="bvform:_id612">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-11-1" class="colLeft"><span id="bvform:_id937"><span id="bvform:_id938"><select size="1" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60473" id="bvform:child_60473"><option value="">----</option>
+<option value="ABILD, Lars, labild@hess.com">ABILD, Lars, labild@hess.com</option>
+<option value="ACTON, David, dave.acton@au.bureauveritas.com">ACTON, David, dave.acton@au.bureauveritas.com</option>
+<option value="Amobi, Iyki, iyki.amobi@uk.bureauveritas.com">Amobi, Iyki, iyki.amobi@uk.bureauveritas.com</option>
+<option value="Axis_YAL1, Axis_YAL1, axis_yal1@free.fr">Axis_YAL1, Axis_YAL1, axis_yal1@free.fr</option>
+<option value="Azari Pour Esfahani, Monir, mnra@ramboll.com">Azari Pour Esfahani, Monir, mnra@ramboll.com</option>
+<option value="BÜLOW JENSEN, Erik, ebjensen@hess.com">BÜLOW JENSEN, Erik, ebjensen@hess.com</option>
+<option value="CEGAR, Irena, irena.cegar@uk.bureauveritas.com">CEGAR, Irena, irena.cegar@uk.bureauveritas.com</option>
+<option value="CEGAR, Petar, petar.cegar@uk.bureauveritas.com">CEGAR, Petar, petar.cegar@uk.bureauveritas.com</option>
+<option value="Dembo, Musa, musa.dembo@uk.bureauveritas.com">Dembo, Musa, musa.dembo@uk.bureauveritas.com</option>
+<option value="GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)">GRAY, Alan, alan.gray@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Goodley, Colin, colin.goodley@uk.bureauveritas.com">Goodley, Colin, colin.goodley@uk.bureauveritas.com</option>
+<option value="HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com">HASHMI, Abdul, abdul.hashmi@uk.bureauveritas.com</option>
+<option value="HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)">HEALD, Darrell, darrell.heald@uk.bureauveritas.com (INACTIVE)</option>
+<option value="HUNTER, Lee, lee.hunter@uk.bureauveritas.com">HUNTER, Lee, lee.hunter@uk.bureauveritas.com</option>
+<option value="JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com">JACOBSEN, Bjarne, bjarne.jacobsen@dk.bureauveritas.com</option>
+<option value="JENSEN, Jens, jens.jensen@hess.com">JENSEN, Jens, jens.jensen@hess.com</option>
+<option value="Jacobsen, Per, pjacobsen@hess.com">Jacobsen, Per, pjacobsen@hess.com</option>
+<option value="LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com">LINDKVIST, Mette, mette.lindkvist@dk.bureauveritas.com</option>
+<option value="Lundbaek, Peter, peter.lundbaek@hess.com">Lundbaek, Peter, peter.lundbaek@hess.com</option>
+<option value="Løwe Jensen, Michael, mljensen@hess.com">Løwe Jensen, Michael, mljensen@hess.com</option>
+<option value="MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com">MAKINDE, Kehinde, kehinde.makinde@uk.bureauveritas.com</option>
+<option value="MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)">MELLOR, Steve, steve.mellor@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com">Mikkelsen, Torben, torben.mikkelsen@dk.bureauveritas.com</option>
+<option value="Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com">Mohammed, Rizwan, rizwan.mohammed@uk.bureauveritas.com</option>
+<option value="NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com">NIELSEN, Jesper, jesper.nielsen@dk.bureauveritas.com</option>
+<option value="NOBLE, William, bill.noble@uk.bureauveritas.com">NOBLE, William, bill.noble@uk.bureauveritas.com</option>
+<option value="Nazzari, Idin, idin.nazzari@uk.bureauveritas.com">Nazzari, Idin, idin.nazzari@uk.bureauveritas.com</option>
+<option value="Nielsen, Morten, morten.nielsen@hess.com">Nielsen, Morten, morten.nielsen@hess.com</option>
+<option value="Nielsen, Niels Peter, nnielsen@hess.com">Nielsen, Niels Peter, nnielsen@hess.com</option>
+<option value="Noble, Bill, noblewm@yahoo.co.uk">Noble, Bill, noblewm@yahoo.co.uk</option>
+<option value="Nysted, Henrik, hnysted@hess.com">Nysted, Henrik, hnysted@hess.com</option>
+<option value="Olander, Jeppe, jppo@ramboll.com">Olander, Jeppe, jppo@ramboll.com</option>
+<option value="Reib, Stefan, sreib@hess.com">Reib, Stefan, sreib@hess.com</option>
+<option value="SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com">SIMONSEN, Henning, henning.simonsen@dk.bureauveritas.com</option>
+<option value="STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)">STEWART, Charlie, charlie.stewart@uk.bureauveritas.com (INACTIVE)</option>
+<option value="STONE, Martin, martin.stone@uk.bureauveritas.com">STONE, Martin, martin.stone@uk.bureauveritas.com</option>
+<option value="Simpson, Lisa, lisa.simpson@uk.bureauveritas.com">Simpson, Lisa, lisa.simpson@uk.bureauveritas.com</option>
+<option value="THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)">THOMSON, Jamie, jamie.thomson@uk.bureauveritas.com (INACTIVE)</option>
+<option value="TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)">TOCHER, Claire, claire.tocher@uk.bureauveritas.com (INACTIVE)</option>
+<option value="Thrane, Peter, peter.thrane@hess.com">Thrane, Peter, peter.thrane@hess.com</option>
+<option value="Thygesen, H.P., hpt@ramboll.com">Thygesen, H.P., hpt@ramboll.com</option>
+<option value="Torp, Erik Jensen, etorp@hess.com">Torp, Erik Jensen, etorp@hess.com</option>
+<option value="UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com">UDE, Nnamdi, nnamdi.ude@uk.bureauveritas.com</option>
+<option value="WATT, Gordon, gordon.watt@uk.bureauveritas.com">WATT, Gordon, gordon.watt@uk.bureauveritas.com</option>
+<option value="WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com">WYDRA, Maciej, maciej.wydra@uk.bureauveritas.com</option></select>
+<br><input type="checkbox" onfocus="setFocus(this.id);" onclick="iceSubmitPartial(form, this, event);" onblur="setFocus('');" name="bvform:popup-child_60473" id="bvform:popup-child_60473" class="iceSelBoolChkbx">Use popup</span></span>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-12-0" class="colLeft"><span id="bvform:_id614"><label id="bvform:_id615" class="formLabel">Response Date</label>
+<span style="color: red" id="bvform:_id616">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-12-1" class="colLeft"><span id="bvform:_id619"><table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id620"><tbody><tr><td id="bvform:_id620-0-0"><div onkeyup="onKeyDownLimitLengthDate('child_60495');" id="bvform:child_60495_rootDiv" class="iceSelInpDatePopup"><input type="text" value="" onkeypress="iceSubmit(form,this,event);" onfocus="setFocus('');" onblur="setFocus('');iceSubmitPartial(form, this, event);" name="bvform:child_60495" id="bvform:child_60495" class="iceSelInpDateInput"><input type="image" title="Open popup calendar" src="images/calendar.png" onfocus="setFocus('');" onclick="document.forms['bvform']['bvform:_idcl'].value='bvform:child_60495_calendarButton';document.forms['bvform']['bvform:_idbvform:child_60495showPopup'].value='toggle';iceSubmitPartial( document.forms['bvform'], this,event); return false;" name="bvform:child_60495_calendarButton" id="bvform:child_60495_calendarButton" alt="Open popup calendar"></div></td><td id="bvform:_id620-0-1"></td></tr></tbody></table></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-13-0" class="colLeft"><span id="bvform:_id622"><label id="bvform:_id623" class="formLabel">Completion Date</label>
+<span style="color: red" id="bvform:_id624">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-13-1" class="colLeft"><span id="bvform:_id627"><table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id628"><tbody><tr><td id="bvform:_id628-0-0"><div onkeyup="onKeyDownLimitLengthDate('child_60480');" id="bvform:child_60480_rootDiv" class="iceSelInpDatePopup"><input type="text" value="" onkeypress="iceSubmit(form,this,event);" onfocus="setFocus('');" onblur="setFocus('');iceSubmitPartial(form, this, event);" name="bvform:child_60480" id="bvform:child_60480" class="iceSelInpDateInput"><input type="image" title="Open popup calendar" src="images/calendar.png" onfocus="setFocus('');" onclick="document.forms['bvform']['bvform:_idcl'].value='bvform:child_60480_calendarButton';document.forms['bvform']['bvform:_idbvform:child_60480showPopup'].value='toggle';iceSubmitPartial( document.forms['bvform'], this,event); return false;" name="bvform:child_60480_calendarButton" id="bvform:child_60480_calendarButton" alt="Open popup calendar"></div></td><td id="bvform:_id628-0-1"></td></tr></tbody></table></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-14-0" class="colLeft"><span id="bvform:_id630"><label id="bvform:_id631" class="formLabel">Integrity/Equipment Issue</label>
+<span style="color: red" id="bvform:_id632">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-14-1" class="colLeft">
+                                                                                                                                <table border="0" id="bvform:equipmentissue">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837053" name="bvform:equipmentissue" id="bvform:equipmentissue:_1">
+                                                                                                                                                <label for="bvform:equipmentissue:_1">Yes</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837054" name="bvform:equipmentissue" id="bvform:equipmentissue:_2">
+                                                                                                                                                <label for="bvform:equipmentissue:_2">No</label>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id496-15-0" class="colLeft"><span id="bvform:_id639"><label id="bvform:_id640" class="formLabel">Paperwork / Process Issue</label>
+<span style="color: red" id="bvform:_id641">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id496-15-1" class="colLeft">
+                                                                                                                                <table border="0" id="bvform:paperworkprocessissue">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837053" name="bvform:paperworkprocessissue" id="bvform:paperworkprocessissue:_1">
+                                                                                                                                                <label for="bvform:paperworkprocessissue:_1">Yes</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837054" name="bvform:paperworkprocessissue" id="bvform:paperworkprocessissue:_2">
+                                                                                                                                                <label for="bvform:paperworkprocessissue:_2">No</label>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table  class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id658">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id659" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id659-0-0" class="headerLeft"><span id="bvform:_id660" class="menuHeaderText">Duty Holder and Bureau Veritas Comments<a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id658-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id662" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id662-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table cellspacing="0" cellpadding="0" id="bvform:_id947">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id947-0-0">
+                                                                                                                                <table width="100%" cellspacing="0" id="bvform:_id948" class="iceDatTbl">
+                                                                                                                                    <thead>
+                                                                                                                                        <tr>
+                                                                                                                                            <th class="iceDatTblColHdr1"></th>
+                                                                                                                                            <th class="iceDatTblColHdr2">Date</th>
+                                                                                                                                            <th class="iceDatTblColHdr1">Entered By</th>
+                                                                                                                                            <th class="iceDatTblColHdr2">Comments</th>
+                                                                                                                                            <th class="iceDatTblColHdr1">Attachments</th>
+                                                                                                                                        </tr>
+                                                                                                                                    </thead>
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td></td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id947-1-0">
+                                                                                                                                <input type="submit" value="Add Row" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:_id984" id="bvform:_id984" class="iceCmdBtn">
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id709">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id710" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id710-0-0" class="headerLeft"><span id="bvform:_id711" class="menuHeaderText">Activity Details <a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id709-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id713" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id713-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table id="bvform:_id717">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-0-0" class="colLeft"><span id="bvform:_id718"><label id="bvform:_id719" class="formLabel">Closeout Date</label></span></td>
+                                                                                                                            <td id="bvform:_id717-0-1" class="colLeft"><span id="bvform:_id723"><table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id724"><tbody><tr><td id="bvform:_id724-0-0"><div onkeyup="onKeyDownLimitLengthDate('child_60479');" id="bvform:child_60479_rootDiv" class="iceSelInpDatePopup"><input type="text" value="" onkeypress="iceSubmit(form,this,event);" onfocus="setFocus('');" onblur="setFocus('');iceSubmitPartial(form, this, event);" name="bvform:child_60479" id="bvform:child_60479" class="iceSelInpDateInput"><input type="image" title="Open popup calendar" src="images/calendar.png" onfocus="setFocus('');" onclick="document.forms['bvform']['bvform:_idcl'].value='bvform:child_60479_calendarButton';document.forms['bvform']['bvform:_idbvform:child_60479showPopup'].value='toggle';iceSubmitPartial( document.forms['bvform'], this,event); return false;" name="bvform:child_60479_calendarButton" id="bvform:child_60479_calendarButton" alt="Open popup calendar"></div></td><td id="bvform:_id724-0-1"></td></tr></tbody></table></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-1-0" class="colLeft"><span id="bvform:_id726"><label id="bvform:_id727" class="formLabel">Modified By</label></span></td>
+                                                                                                                            <td id="bvform:_id717-1-1" class="colLeft">David ACTON</td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-2-0" class="colLeft"><span id="bvform:_id730"><label id="bvform:_id731" class="formLabel">Last Modification Date</label></span></td>
+                                                                                                                            <td id="bvform:_id717-2-1" class="colLeft">15/03/2016</td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-3-0" class="colLeft"><span id="bvform:_id734"><label id="bvform:_id735" class="formLabel">Remedial Work Order</label></span></td>
+                                                                                                                            <td id="bvform:_id717-3-1" class="colLeft">
+                                                                                                                                <input type="text" value="" onmousedown=";this.focus();" onfocus="setFocus(this.id);" onblur="setFocus('');" name="bvform:child_60494" maxlength="50" id="bvform:child_60494" class="iceInpTxt"><span id="bvform:_id739"></span></td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-4-0" class="colLeft"><span id="bvform:_id740"><label id="bvform:_id741" class="formLabel">Risk Assessment Complete?</label>
+<span style="color: red" id="bvform:_id742">*</span></span>
+                                                                                                                            </td>
+                                                                                                                            <td id="bvform:_id717-4-1" class="colLeft">
+                                                                                                                                <table border="0" id="bvform:riskassessmentcomplete">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837055" name="bvform:riskassessmentcomplete" id="bvform:riskassessmentcomplete:_1">
+                                                                                                                                                <label for="bvform:riskassessmentcomplete:_1">Yes</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837056" name="bvform:riskassessmentcomplete" id="bvform:riskassessmentcomplete:_2">
+                                                                                                                                                <label for="bvform:riskassessmentcomplete:_2">No</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837057" name="bvform:riskassessmentcomplete" id="bvform:riskassessmentcomplete:_3">
+                                                                                                                                                <label for="bvform:riskassessmentcomplete:_3">NA</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837058" name="bvform:riskassessmentcomplete" id="bvform:riskassessmentcomplete:_4">
+                                                                                                                                                <label for="bvform:riskassessmentcomplete:_4">TBC</label>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-5-0" class="colLeft"><span id="bvform:_id749"><label id="bvform:_id750" class="formLabel">Are Contingency Action Adequate</label></span></td>
+                                                                                                                            <td id="bvform:_id717-5-1" class="colLeft">
+                                                                                                                                <table border="0" id="bvform:arecontingencyactionadequate">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837055" name="bvform:arecontingencyactionadequate" id="bvform:arecontingencyactionadequate:_1">
+                                                                                                                                                <label for="bvform:arecontingencyactionadequate:_1">Yes</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837056" name="bvform:arecontingencyactionadequate" id="bvform:arecontingencyactionadequate:_2">
+                                                                                                                                                <label for="bvform:arecontingencyactionadequate:_2">No</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837057" name="bvform:arecontingencyactionadequate" id="bvform:arecontingencyactionadequate:_3">
+                                                                                                                                                <label for="bvform:arecontingencyactionadequate:_3">NA</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837058" name="bvform:arecontingencyactionadequate" id="bvform:arecontingencyactionadequate:_4">
+                                                                                                                                                <label for="bvform:arecontingencyactionadequate:_4">TBC</label>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id717-6-0" class="colLeft"><span id="bvform:_id758"><label id="bvform:_id759" class="formLabel">Do You Wish to Send Action Party an Email Update?</label></span></td>
+                                                                                                                            <td id="bvform:_id717-6-1" class="colLeft">
+                                                                                                                                <table border="0" id="bvform:sendemailtoactionparty">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837053" name="bvform:sendemailtoactionparty" id="bvform:sendemailtoactionparty:_1">
+                                                                                                                                                <label for="bvform:sendemailtoactionparty:_1">Yes</label>
+                                                                                                                                            </td>
+                                                                                                                                            <td>
+                                                                                                                                                <input type="radio" value="1837054" name="bvform:sendemailtoactionparty" id="bvform:sendemailtoactionparty:_2">
+                                                                                                                                                <label for="bvform:sendemailtoactionparty:_2">No</label>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="bvn-detail-section" width="100%" cellspacing="0" cellpadding="0" id="bvform:_id777">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="colgroup" colspan="1" class="menuHeader">
+                                                                                <table id="bvform:_id778" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id778-0-0" class="headerLeft"><span id="bvform:_id779" class="menuHeaderText">Mitigation Information <a href="#"><i class="bvn-icon icon-arrow-up"></i></a></span></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id777-0-0">
+                                                                                <table width="100%" cellspacing="0" cellpadding="0" id="bvform:_id781" class="formBackground">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td id="bvform:_id781-0-0">
+                                                                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="left">
+                                                                                                                <table cellspacing="0" cellpadding="0" id="bvform:_id989">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id989-0-0">
+                                                                                                                                <table width="100%" cellspacing="0" id="bvform:_id990" class="iceDatTbl">
+                                                                                                                                    <thead>
+                                                                                                                                        <tr>
+                                                                                                                                            <th class="iceDatTblColHdr1"></th>
+                                                                                                                                            <th class="iceDatTblColHdr2">Mitigation / Contingency Action Date</th>
+                                                                                                                                            <th class="iceDatTblColHdr1">Mitigation / Contingency Action</th>
+                                                                                                                                        </tr>
+                                                                                                                                    </thead>
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td></td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                            <td id="bvform:_id989-1-0">
+                                                                                                                                <input type="submit" value="Add Row" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:_id1002" id="bvform:_id1002" class="iceCmdBtn">
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="bvn-bottom-buttons-row">
+                                                                <table id="bvform:_id804">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="bvform:_id804-0-0">
+                                                                                <button class="bvn-button"><i class="icon-save"></i> Save</button>
+                                                                                <!--
+                                                                                <input type="submit" value="Save" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:Submit" id="bvform:Submit" class="iceCmdBtn"> -->
+                                                                            </td>
+                                                                            <td id="bvform:_id804-0-1">
+                                                                                <button class="bvn-button"><i class="icon-cross"></i> Cancel</button>
+                                                                                <!--
+                                                                                <input type="submit" value="Cancel" onfocus="setFocus(this.id);" onclick="iceSubmit(form,this,event);return false;" onblur="setFocus('');" name="bvform:Cancel" id="bvform:Cancel" class="iceCmdBtn"> -->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                </div>
+                                                                <div style="display:none;" id="bvformhdnFldsDiv">
+                                                                    <input type="hidden" name="bvform:_idbvform:child_60479showPopup">
+                                                                    <input type="hidden" name="bvform:_idbvform:child_60486showPopup">
+                                                                    <input type="hidden" name="bvform:_idcl">
+                                                                    <input type="hidden" name="bvform:_idbvform:child_60495showPopup">
+                                                                    <input type="hidden" name="bvform:_idbvform:child_60480showPopup">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        ;
+    </script>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:dynamic-code" type="text/javascript">
+        Ice.Focus.setFocus('loginForm:_id56'); //878217088
+    </script>
+    <noscript>&lt;meta content="0;url=/bvnet/xmlhttp/javascript-blocked" http-equiv="refresh" /&gt;</noscript>
+</body>
+
+</html>

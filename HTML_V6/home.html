@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html id="document:html" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- start: change meta type to edge. added by rajneesh -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- end -->
+    <meta content="BVNETV2-APPLICATION" name="bureauveritas-description">
+    <meta content="5.1.2-SNAPSHOT" name="Application-Version">
+    <link href="styles/royale.css" rel="stylesheet" type="text/css">
+    <link href="styles/bvnet.css" rel="stylesheet" type="text/css">
+    <link href="fonts/icomoon-fonts/style.css" rel="stylesheet" >
+    <script src="scripts/fixsearchheader.js" type="text/javascript"></script>
+    <script src="./BVnet_files/DownloadExcel.js" type="text/javascript"></script>
+    <script src="./BVnet_files/filterForm.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.js" type="text/javascript"></script>
+    <script src="./BVnet_files/fusioncharts.theme.fint.js" type="text/javascript"></script>
+    <script src="./BVnet_files/validation.js" type="text/javascript"></script>
+    <script src="./BVnet_files/jumploader.js" type="text/javascript"></script>
+    <script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <title id="document:title">BVnet</title>
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        function appletInitialized(applet) {
+            enableStatusChange();
+            //applet.getViewConfig().setFileListViewLocationBarVisible(true);
+            //applet.getViewConfig().setMainViewFileListViewVisible(true);
+            jQuery.post("/bvnet/createUploadFolderServlet");
+            applet.getUploaderConfig().setUploadUrl('ftp://bvnet2uploader:KLfed659uplKN6@bvnet2-uat.bureauveritas.com:990/VbIERyNLhNbvCdKRLCt13TxI.3a1dcdb6-8132-34c5-9568-83c31c7c98e7?passive"');
+            applet.getMainView().updateView();
+        }
+    </script>
+<!-- start: custom.js added by rajneesh -->
+    <script src="scripts/custom.js" type="text/javascript"></script>
+<!-- end -->
+    <meta content="Rendered by ICEFaces D2D" name="icefaces">
+    <script src="./BVnet_files/icefaces-d2d.js" type="text/javascript"></script>
+    <script src="./BVnet_files/ice-extras.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        try {
+            document.execCommand('BackgroundImageCache', false, true);
+        } catch (e) {}
+    </script>
+</head>
+
+<body class="" id="document:body">
+    <iframe frameborder="0" id="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" name="history-frame:0BNCDGaNyRt8eadp9c2u2A:1" src="./BVnet_files/blank.html" style="z-index: 10000; visibility: hidden; width: 0; height: 0; position: absolute; opacity: 0.22; filter: alpha(opacity=22);" title="Icefaces Redirect"></iframe>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:configuration-script" type="text/javascript">
+        if (!window.sessions) window.sessions = [];
+        window.sessions.push('0BNCDGaNyRt8eadp9c2u2A');
+        window.disposeViewsURI = '/bvnet/block/dispose-views';
+        var container = '0BNCDGaNyRt8eadp9c2u2A:1:configuration-script'.asElement().parentNode;
+        container.bridge = new Ice.Community.Application({
+            session: '0BNCDGaNyRt8eadp9c2u2A',
+            view: 1,
+            synchronous: true,
+            connectionLostRedirectURI: null,
+            sessionExpiredRedirectURI: null,
+            connection: {
+                context: {
+                    current: '/bvnet/',
+                    async: '/bvnet/'
+                },
+                timeout: 300000,
+                heartbeat: {
+                    interval: 20000,
+                    timeout: 15000,
+                    retries: 5
+                }
+            },
+            messages: {
+                sessionExpired: 'User Session Expired',
+                connectionLost: 'Network Connection Interrupted',
+                serverError: 'Server Internal Error',
+                description: 'To reconnect click the Reload button on the browser or click the button below',
+                buttonText: 'Reload'
+            }
+        }, container);
+    </script>
+    <div class="bvn-banner-wrapper">
+<!--        <img class="bvn-banner" src="images/bannerfull.png" /> -->
+        <iframe class="bvn-banner" height="100%" width="100%" frameborder="0" id="component-1005" src="static/banner/en/index.html" style="height: 200px;"></iframe>
+    </div>
+    
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td class="bvn-pictureBackground"  width="100%">
+                    <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                        <table border="0" cellpadding="0" cellspacing="0" id="_id28" width="100%" class="bvn-header">
+                            <tbody>
+                                <tr>
+                                    <td class="headerLeft" id="_id28-0-0">
+                                        <div class="bvn-logo"><img alt="BVNet logo" src="images/bvnetlogo.png"></div>
+                                    </td>
+                                    <td class="headerCenter">
+                                        <div class="bvn-dropdown">
+                                            <ul class="bvn-dropitem">
+                                                <li class="bvn-useritem">
+                                                    <a id="userbtn" href="#">User NAME <i class="bvn-icon icon-arrow-down"></i></a>
+                                                    <ul class="bvn-subitem">
+                                                        <li class="bvn-logout"><a id="menu:_id412" href="/bvnet/html/view/logout.jsp"><span id="menu:logoutSelect" class="Menuitem-Gray">Logout</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="bvn-banneritem">
+                                                    <a id="userbtn" href="#"><i class="bvn-icon icon-arrow-up"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="headerRight" id="_id28-0-1"><img alt="logo" src="images/toolbar-logo-veritas-red.jpg"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </jsp:root>
+                    <table class="icePnlGrd bvn-panel-wrapper" id="_id46" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="icePnlGrdRow1">
+                                <td class="icePnlGrdCol menuCol bvn-left-panel" id="_id46-0-0">
+                                    <div class="bvn-wrapper-left-panel" style="overflow: auto;">
+                                        <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page">
+                                            <form action="javascript:;" class="iceFrm" enctype="application/x-www-form-urlencoded" id="menu" method="post" onsubmit="return false;">
+                                                <script type="text/javascript">
+                                                    $element(document.getElementById('menu')).captureAndRedirectSubmit();
+                                                </script>
+                                                <input name="menu" type="hidden" value="menu">
+                                                <input name="icefacesCssUpdates" type="hidden" value="">
+                                                <table cellpadding="0" cellspacing="0" id="menu:_id49" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="menuExpandCol" id="menu:_id49-0-0">
+                                                                <div class="icePnlGrp" id="menu:_id50" style="display:none">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <input id="menu:_id52" name="menu:_id52" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-right.png" type="image">
+                                                                </div>
+                                                            </td>
+                                                            <td class="menuCol" id="menu:_id49-0-1">
+                                                                <div class="icePnlGrp leftNav" id="menu:_id53">
+                                                                    <!-- rajneesh display none/block -->
+                                                                    <table id="menu:_id54" width="100%">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="menuHeader" colspan="1" scope="colgroup">
+                                                                                    <table class="icePnlGrd" id="menu:_id55" width="100%">
+                                                                                        <tbody>
+                                                                                            <tr class="icePnlGrdRow1">
+                                                                                                <td class="icePnlGrdCol headerLeft" id="menu:_id55-0-0"><span class="menuHeaderText" id="menu:menuHeaderText">Menu</span></td>
+                                                                                                <td class="icePnlGrdCol headerRight" id="menu:_id55-0-1">
+                                                                                                    <input id="menu:menuArrowClose" name="menu:menuArrowClose" onblur="setFocus(&#39;&#39;);" onclick="iceSubmit(form,this,event);return false;" onfocus="setFocus(this.id);" src="images/css-images/angle-left.png" type="image">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td id="menu:_id54-0-0">
+                                                                                    <table class="menuBorder" id="menu:_id58" cellspacing="0" cellpadding="0">
+                                                                                        <tbody>
+                                                                                            <!-- comment by rajneesh
+                                                                                        <tr>
+                                                                                            <td id="menu:_id58-0-0">
+                                                                                                <div class="iceOutConStat" id="menu:connectionStatus">
+                                                                                                    <div class="iceOutConStatInactv" id="menu:connectionStatus:connection-idle" style="visibility: visible;"></div>
+                                                                                                    <div class="iceOutConStatActv" id="menu:connectionStatus:connection-working" style="visibility: hidden;"></div>
+                                                                                                    <div class="iceOutConStatCaution" id="menu:connectionStatus:connection-trouble" style="visibility: hidden;"></div>
+                                                                                                    <div class="iceOutConStatDisconnect" id="menu:connectionStatus:connection-lost" style="visibility: hidden;">An error has occurred. Click here to login</div>
+                                                                                                    <script type="text/javascript">
+                                                                                                        'menu:connectionStatus'.asExtendedElement().findContainerFor('bridge').bridge.attachStatusManager(function (defaultStatusManager) {
+                                                                                                            return new Ice.Status.ComponentStatusManager('menu:connectionStatus:connection-working', 'menu:connectionStatus:connection-idle', 'menu:connectionStatus:connection-trouble', 'menu:connectionStatus:connection-lost', defaultStatusManager, false, false);
+                                                                                                        });
+                                                                                                    </script>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td id="menu:_id58-1-0">
+                                                                                                <script type="text/javascript">
+                                                                                                    document.getElementById('menu:connectionStatus:connection-lost').onclick = function () {
+                                                                                                        location.reload(true);
+                                                                                                    }
+                                                                                                </script>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td id="menu:_id58-2-0">
+                                                                                                <div style="padding: 7px; margin: 0px;"></div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        
+                                                                                        -->
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-3-0">
+                                                                                                    <div class="gsd-left-search"><span id="menu:_id65"><span class="greyboldmenu" id="menu:_id66">Select Project</span>
+                                                                                                        <select class="iceSelOneMnu" id="menu:projectSelect" name="menu:projectSelect" onblur="setFocus(&#39;&#39;);" onchange="setFocus(&#39;&#39;);iceSubmitPartial(form, this, event);" onfocus="setFocus(this.id);" size="1" style="width:125px;font-size:7pt;font-family:Arial;">
+                                                                                                            <option selected="selected" value="166428">BP</option>
+                                                                                                            <option value="166430">Hess Denmark</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                        <span id="menu:_id71"><span class="greyboldmenu" id="menu:_id72">Select Client</span>
+                                                                                                        <select class="iceSelOneMnu" id="menu:clientSelect" name="menu:clientSelect" onblur="setFocus(&#39;&#39;);" onchange="setFocus(&#39;&#39;);iceSubmitPartial(form, this, event);" onfocus="setFocus(this.id);" size="1" style="width:125px;font-size:7pt;font-family:Arial;">
+                                                                                                            <option selected="selected" value="6132">BP</option>
+                                                                                                        </select>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="bvn-active" id="menu:_id58-4-0"><a href="javascript:;" id="menu:_id77" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id77&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-home"></i>Home</span></a></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-5-0">
+                                                                                                    <jsp:root version="2.0" xmlns:jsp="http://java.sun.com/JSP/Page"></jsp:root>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-6-0"><a href="javascript:;" id="menu:_id79:0:_id96" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:0:_id96&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Production Data</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id79:0:_id98">
+                                                                                                        <table id="menu:_id79:0:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:0:_id100-0-0"><a href="javascript:;" id="menu:_id79:0:_id99:0:_id101" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:0:_id99:0:_id101&#39;;form[&#39;formId&#39;].value=&#39;2567&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Weekly Surveillance Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:1:_id104-0-0"><a href="javascript:;" id="menu:_id79:0:_id99:1:_id105" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:0:_id99:1:_id105&#39;;form[&#39;formId&#39;].value=&#39;2567&#39;;form[&#39;myFindings&#39;].value=&#39;false&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Weekly Surveillance Report Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:2:_id100-0-0"><a href="javascript:;" id="menu:_id79:0:_id99:2:_id101" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:0:_id99:2:_id101&#39;;form[&#39;formId&#39;].value=&#39;2568&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Product</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:0:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:0:_id99:3:_id104-0-0"><a href="javascript:;" id="menu:_id79:0:_id99:3:_id105" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:0:_id99:3:_id105&#39;;form[&#39;formId&#39;].value=&#39;2568&#39;;form[&#39;myFindings&#39;].value=&#39;false&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Product Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                    <a href="javascript:;" id="menu:_id79:1:_id96" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id96&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Reference Form</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id79:1:_id98">
+                                                                                                        <table id="menu:_id79:1:_id99:0:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:0:_id100-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:0:_id101" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:0:_id101&#39;;form[&#39;formId&#39;].value=&#39;2564&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Product List</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:1:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:1:_id104-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:1:_id105" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:1:_id105&#39;;form[&#39;formId&#39;].value=&#39;2564&#39;;form[&#39;myFindings&#39;].value=&#39;false&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Product List Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:2:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:2:_id100-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:2:_id101" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:2:_id101&#39;;form[&#39;formId&#39;].value=&#39;2565&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Reason to Visit</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:3:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:3:_id104-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:3:_id105" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:3:_id105&#39;;form[&#39;formId&#39;].value=&#39;2565&#39;;form[&#39;myFindings&#39;].value=&#39;false&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Reason to Visit Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:4:_id100">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:4:_id100-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:4:_id101" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:4:_id101&#39;;form[&#39;formId&#39;].value=&#39;2566&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-edit-add"></i>Supplier List</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id79:1:_id99:5:_id104">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id79:1:_id99:5:_id104-0-0"><a href="javascript:;" id="menu:_id79:1:_id99:5:_id105" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id79:1:_id99:5:_id105&#39;;form[&#39;formId&#39;].value=&#39;2566&#39;;form[&#39;myFindings&#39;].value=&#39;false&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="Menuitem-Gray bvn-menu-icons"><i class="bvn-icon icon-search"></i>Supplier List Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-7-0">
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-8-0"><a href="javascript:;" id="menu:_id112" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id112&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Imports</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id114" style="display:none;">
+                                                                                                        <table id="menu:_id122">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id122-0-0"><a href="javascript:;" id="menu:_id123" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id123&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:_id124">Upload PDF Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-9-0"><a href="javascript:;" id="menu:_id180" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id180&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Admin</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id182" style="display:none;">
+                                                                                                        <table id="menu:_id194">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id194-0-0"><a href="javascript:;" id="menu:_id195" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id195&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectreferenceSetup">Reference Setup</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id203">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id203-0-0"><a href="javascript:;" id="menu:_id204" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id204&#39;;form[&#39;paramTypeId&#39;].value=&#39;0&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectAccessStats">Access Stats</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id207">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id207-0-0"><a href="javascript:;" id="menu:_id208" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id208&#39;;form[&#39;reportName&#39;].value=&#39;BV Users Search&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectBVuserSearch">BV Users Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id211">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id211-0-0"><a href="javascript:;" id="menu:_id212" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id212&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectBVuserAdmin">BV User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id214">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id214-0-0"><a href="javascript:;" id="menu:_id215" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id215&#39;;form[&#39;reportName&#39;].value=&#39;Client User Search&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectclientuserSearch">Client User Search</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id218">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id218-0-0"><a href="javascript:;" id="menu:_id219" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id219&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelectclientuserAdmin">Client User Admin</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id227">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id227-0-0"><a href="javascript:;" id="menu:_id228" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id228&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:adminSelecthomepage">Edit Home Page</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-10-0"><a href="javascript:;" id="menu:_id332" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id332&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Security</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id334" style="display:none;">
+                                                                                                        <table id="menu:_id335">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id335-0-0"><a href="javascript:;" id="menu:_id336" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id336&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:securitySelectprofiles">Profiles</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id337">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id337-0-0"><a href="javascript:;" id="menu:_id338" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id338&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:securitySelectprofileAccess">Profile Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id339">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id339-0-0"><a href="javascript:;" id="menu:_id340" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id340&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:securitySelectprofilefieldaccess">Profile Field Access</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td id="menu:_id58-11-0"><a href="javascript:;" id="menu:_id366" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id366&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span id="menu:homeSelect" class="redboldmenu bvn-menu-icons"><i class="bvn-icon icon-add-library"></i>Maintenance</span></a>
+                                                                                                    <div class="icePnlGrp leftNav" id="menu:_id368" style="display:none;">
+                                                                                                        <table id="menu:Maintenance:3:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:3:_id369-0-0"><a href="javascript:;" id="menu:Maintenance:3:_id370" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:Maintenance:3:_id370&#39;;form[&#39;formId&#39;].value=&#39;2567&#39;;form[&#39;reportPath&#39;].value=&#39;/report&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:Maintenance:3:Delete">Delete Weekly Surveillance Report</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:Maintenance:4:_id369">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:Maintenance:4:_id369-0-0"><a href="javascript:;" id="menu:Maintenance:4:_id370" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:Maintenance:4:_id370&#39;;form[&#39;formId&#39;].value=&#39;2568&#39;;form[&#39;reportPath&#39;].value=&#39;/report&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:Maintenance:4:Delete">Delete Product</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                        <table id="menu:_id377">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td id="menu:_id377-0-0"><a href="javascript:;" id="menu:_id378" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id378&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="Menuitem-Gray" id="menu:clearCache">Clear cache</span></a></td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!--
+                                                                                        <tr>
+                                                                                            <td id="menu:_id58-12-0"><a href="javascript:;" id="menu:_id408" onblur="setFocus(&#39;&#39;);" onclick="var form=formOf(this);form[&#39;menu:_idcl&#39;].value=&#39;menu:_id408&#39;;return iceSubmit(form,this,event);" onfocus="setFocus(this.id);"><span class="redboldmenu" id="menu:_id409">Session</span></a>
+                                                                                                <div class="icePnlGrp leftNav" id="menu:_id410">
+                                                                                                    <table id="menu:_id411">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td id="menu:_id411-0-0"><a href="https://bvnet2-uat.bureauveritas.com/bvnet/html/view/logout.jsp" id="menu:_id412"><span class="Menuitem-Gray" id="menu:logoutSelect">Logout</span></a></td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr> -->
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <!--
+                                                                        <tr>
+                                                                            <td id="menu:_id54-1-0">
+                                                                                <table cellpadding="0" cellspacing="0" id="menu:_id419" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr style="display: none;">
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td class="menuFooter" colspan="1">
+                                                                                                <table class="icePnlGrd" id="menu:_id420" width="100%">
+                                                                                                    <tbody>
+                                                                                                        <tr style="display: none;">
+                                                                                                            <td></td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        -->
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div id="menuhdnFldsDiv" style="display:none;">
+                                                    <input name="formId" type="hidden">
+                                                    <input name="myFindings" type="hidden">
+                                                    <input name="reportName" type="hidden">
+                                                    <input name="reportPath" type="hidden">
+                                                    <input name="paramTypeId" type="hidden">
+                                                    <input name="menu:_idcl" type="hidden">
+                                                </div>
+                                            </form>
+                                        </jsp:root>
+                                    </div>
+                                </td>
+                                <td class="icePnlGrdCol pageCol bvn-right-panel" id="_id46-0-1">
+                                    <div class="bvn-wrapper-right-panel" style="overflow: auto;">
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        ;
+    </script>
+    <script id="0BNCDGaNyRt8eadp9c2u2A:1:dynamic-code" type="text/javascript">
+        Ice.Focus.setFocus('loginForm:_id56'); //878217088
+    </script>
+    <noscript>&lt;meta content="0;url=/bvnet/xmlhttp/javascript-blocked" http-equiv="refresh" /&gt;</noscript>
+</body>
+
+</html>
